@@ -1,0 +1,44 @@
+.homepage{
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    margin: 0 40px;
+}
+
+.homepage ul{
+    list-style: none;
+    padding: 0;
+
+}
+.homepage h1, .homepage p{
+    margin: 0;
+    padding: 0;
+
+}
+
+.homepage li{
+    width: 100%;
+    height: 50vh;
+    vertical-align: middle;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#about {
+    background-image: url('https://placehold.jp/150x150.png');
+}
+
+#work {
+    background-image: url('https://placehold.jp/150x150.png');
+}
+
+#article {
+    background-image: url('https://placehold.jp/150x150.png');
+}
+
+#contact {
+    background-image: url('https://placehold.jp/150x150.png');
+}
