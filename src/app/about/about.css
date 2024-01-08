@@ -1,5 +1,6 @@
 .about{
     margin-left: 30px;
+    color: #fff;
 }
 
 .prof-img{
@@ -22,7 +23,7 @@ p{
 h2{
     font-size: 3rem;
 
-    border-bottom: #000 solid 3px;
+    border-bottom: #ef5fff solid 3px;
     margin-bottom: 10px;
 }
 
@@ -32,6 +33,9 @@ h2{
     display: flex;
     gap: 10px;
     margin: 20px 30px;
+    width: 1fr;
+    height: 100%;
+    
 }
 
 

@@ -1,5 +1,5 @@
 .works {
-    
+    color: #fff; 
     display: grid;
     margin: 0 5%;
     grid-template-columns: 1fr 1fr;
@@ -7,9 +7,9 @@
 }
 
 .work{
-    background-color: blue;
     margin: 7% 5%;
-
+    background-color: #000;
+    border: #ef5fff 1px solid;
 }
 
 .work a{

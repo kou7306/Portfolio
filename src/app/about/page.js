@@ -18,7 +18,7 @@ export default function Page() {
       <div className='affiliation'>
       <h2>Affiliation</h2>
       <ul>
-        <li>Kota Yahagi</li>
+
 
         <li>Student in Tsukuba University </li>
         <li>STECH</li>
