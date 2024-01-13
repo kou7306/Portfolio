@@ -7,36 +7,3 @@
     margin: 20px 30px;
 }
 
-.item {
-    border: 2px solid #ef5fff;
-    border-radius: 8px;
-    padding: 16px 24px;
-}
-
-.tag {
-    border: 2px solid #fff;
-    border-radius: 8px;
-    margin:4px;
-    padding: 4px;
-}
-
-.spans{
-    margin:12px 0;
-}
-
-h2 {
-    margin:12px 0;
-    font-size: 34px;
-}
-
-.heart {
-    margin-right: 2px;
-}
-
-.likes {
-    margin-left: 12px;
-}
-
-.date{
-    border-bottom: #fff solid 1px;
-}

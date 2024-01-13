@@ -1,7 +1,6 @@
 .homepage{
     color: white;
     font-size: 3rem;
-    text-align: center;
     margin: 0 40px;
 }
 
@@ -10,35 +9,55 @@
     padding: 0;
 
 }
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .homepage h1, .homepage p{
     margin: 0;
     padding: 0;
 
 }
 
+.homepage h1{
+    margin-left: 30px;
+    display: inline-block;
+    width: 30%;
+    border-bottom: 2px solid white;
+}
 .homepage li{
     width: 100%;
     height: 50vh;
-    vertical-align: middle;
     margin-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 }
 
 
-#about {
-    background-image: url('https://placehold.jp/150x150.png');
+
+/* .pink {
+
+  position: relative;
 }
 
-#work {
-    background-image: url('https://placehold.jp/150x150.png');
-}
+.pink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -7px;
+  width: 100%;
+  height: 50%;
+  background-color: #ef5fff; /* 適切な色に調整 */
+  /* z-index: -1;
+ 
+} */ 
 
-#article {
-    background-image: url('https://placehold.jp/150x150.png');
-}
+.gradient-border {
+    border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
+    border-image: linear-gradient(to right, #ef5fff, #ffffff); /* グラデーションの色を指定 */
+    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+  }
 
-#contact {
-    background-image: url('https://placehold.jp/150x150.png');
-}
+

@@ -15,7 +15,7 @@ export default async function Page() {
       <h1 className='work_title'>Works</h1>
       <ul className='works'>
       {datas.map((work) => (
-        <li className='work' key={work.id} >
+        <li className='m-4 bg-black border-2 border-pink-400' key={work.id} >
           <a href={`/works/${work.id}`} >
             
               <img className='work-img' src={work.work_imgs[0].url} alt={work.work_name} />
@@ -31,5 +31,5 @@ export default async function Page() {
   );
 };
 
-  
+
 
