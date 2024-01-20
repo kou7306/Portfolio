@@ -1,11 +1,44 @@
 .article-all{
     display: flex;
+    color: white;
+ 
+    /* 仮の高さ、実際のページに合わせて調整してください */
+
 }
 
 .article-title{
-    width: 50vw;
+    width: 40vw;
+    margin-left: 40px;
+
 }
 
-.article-content{
-    width: 50vw;
+.article-title h1{
+    font-size: 6.5rem;
+    font-weight: bold;
+
 }
+
+.article-contents{
+    width: 60vw;
+    margin-left: 5%;
+    font-size: 1.5rem;
+    margin-top: 50px;
+    
+}
+
+
+
+.article-button{
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.article-item{
+    display: flex;
+    border-bottom: #ef5fff solid 1px ;
+}
+
+.date{
+    width: 20%;
+}
+

@@ -1,71 +1,63 @@
-"use client"
+
 import React from 'react'
-import { useEffect } from 'react';
+
 import './ArticleTop.css';
+import ViewMoreButton from './ViewMoreButton';
+const accessToken = process.env.QIITA_ACCESS_TOKEN;
 
 
-const ArticleTop = () => {
 
-    useEffect(() => {
-        const container = document.querySelector('.article-all');
-        const title = document.querySelector('.article-title');
-        const contents = document.querySelector('.article-contents');
+async function getData() {
+  const res = await fetch('https://qiita.com/api/v2/authenticated_user/items', {
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+    },
+  });
+  if (!res.ok) {
+    // This will activate the closest `error.js` Error Boundary
+    throw new Error('Failed to fetch data')
+  }
+ 
+  return res.json()
+}
+
+export default async function ArticleTop() {
+   
+    const data = await getData()
     
-        const startScroll = 100; // 適切なスクロール位置に変更
-        const endScroll = 500; // 適切なスクロール位置に変更
-    
-        const handleScroll = () => {
-        const currentScroll = window.scrollY;
-    
-        if (currentScroll >= startScroll && currentScroll <= endScroll) {
-            // 区間内の場合、article-titleのスクロールを無効にする
-            title.style.position = 'fixed';
-            title.style.top = '0';
-            contents.style.marginTop = `${title.offsetHeight}px`;
-        } else {
-            // 区間外の場合、通常のスタイルを適用
-            title.style.position = 'static';
-            contents.style.marginTop = '0';
-        }
-        };
-    
-        window.addEventListener('scroll', handleScroll);
-    
-        return () => {
-        window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
   return (
     <div className='article-all'>
         <div className='article-title'>
             <h1>Article</h1>
+            <p>Qiita記事を更新中</p>
+            <div className='article-button' >
+                <ViewMoreButton rel="article"/>
+            </div>
+            
         </div>
-        <div className='article-contents'>
-            <div className='article-content'>
-                <h2>記事1</h2>
-                <p>記事1の内容</p>
-            </div>
-            <div className='article-content'>
-                <h2>記事2</h2>
-                <p>記事2の内容</p>
-            </div>
-            <div className='article-content'>
-                <h2>記事3</h2>
-                <p>記事3の内容</p>
-            </div>
-            <div className='article-content'>
-                <h2>記事4</h2>
-                <p>記事4の内容</p>
-            </div>
-            <div className='article-content'>
-                <h2>記事5</h2>
-                <p>記事5の内容</p>
-            </div>
+        <ul className='article-contents'>
+            {data.map((item) => (
+            <li key={item.id} className='article-content'>
+                <a href={item.url} className='article-item'>
+                    <p className='date'>{formatDate(item.updated_at)}</p>
+                    <h2>{item.title}</h2>
+                </a>
+            </li>
+            ))}
 
 
-        </div>
+        </ul>
     </div>
   )
 }
 
-export default ArticleTop
+// フォーマット関数
+function formatDate(dateTimeString) {
+    const dateObject = new Date(dateTimeString);
+    const year = dateObject.getFullYear();
+    const month = String(dateObject.getMonth() + 1).padStart(2, '0');
+    const day = String(dateObject.getDate()).padStart(2, '0');
+    
+    return `${year}年${month}月${day}日`;
+  }
+  

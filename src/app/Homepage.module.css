@@ -10,13 +10,20 @@
 
 }
 
-.work-title{
+.worktitle{
     font-size: 6.5rem;
     font-weight: bold;
     display: flex;
     justify-content: space-between;
 }
 
+
+.contacttitle{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    
+}
 .title{
     margin-left: 40px;
 }
@@ -34,11 +41,11 @@
     font-weight: bold;
 } */
 
-.homepage p{
+.pageP{
     margin-left: 30px;
 }
 
-.homepage li{
+.pagelist{
     width: 100%;
     
     margin-top: 300px;
@@ -70,6 +77,10 @@
     margin-top: 80px;
 }
 
-.work-button{
+.workbutton{
     margin-left: 10px;
+}
+
+.contactpage{
+    margin-bottom: 100px;
 }

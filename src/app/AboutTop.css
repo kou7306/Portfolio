@@ -6,8 +6,8 @@
     width: 100vw;   
     background-repeat: no-repeat;
     position: relative; 
-    background-size: cover
-    
+    background-size: cover;
+    object-fit: cover;
 }
 
 .about-all::before {
@@ -43,5 +43,5 @@
 
 
 .about-button{
-    margin-left: 20%;
+    margin-left: 5%;
 }
