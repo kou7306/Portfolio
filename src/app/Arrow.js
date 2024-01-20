@@ -24,7 +24,7 @@ const Arrow = ({rel}) => {
 
     <div>
         <Link href={url}>
-        <span className='right-arrow'>→</span>
+        <span className='right-arrow link'>→</span>
         </Link>
     </div>
   )

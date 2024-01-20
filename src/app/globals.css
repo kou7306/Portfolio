@@ -7,13 +7,13 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #0f0f0f;
+  background-image: url('/images/black1.jpeg');
   width: 80%;
   margin-left: 20%;
   margin-top: 0;
 }
 
-a:hover{
+.link:hover{
   color: #ef5fff;
 }
 
@@ -21,3 +21,12 @@ html{
   margin: 0;
   padding: 0;
 }
+
+.gradient-border {
+  display: inline-block;
+  width: 30%;
+  border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
+  border-image: linear-gradient(to right, #ef5fff, #ffffff); /* グラデーションの色を指定 */
+  border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+}
+

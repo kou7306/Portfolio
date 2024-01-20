@@ -1,0 +1,47 @@
+.works {
+    color: #fff; 
+    display: grid;
+    margin: 0 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.work {
+    margin: 7% 5%;
+    background-color: #fff;
+    border: #ef5fff 1px solid;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* 白い影を追加 */
+    transition: box-shadow 0.3s ease-in-out; /* 影に変化をつけるアニメーション */
+}
+
+.work:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* ホバー時の影の変化 */
+}
+
+.work a {
+    text-align: center;
+    display: block;
+    height: 100%;
+}
+
+.work img {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 8px; /* 画像に角丸を追加 */
+}
+
+.work-detail {
+    padding: 16px;
+}
+
+.work_title {
+    text-align: center;
+    color: #fff; /* タイトルの色を指定 */
+}
+
+
+
+.frame {
+    margin: 1rem;
+    border: #ffffff 1px solid;
+}

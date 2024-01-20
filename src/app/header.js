@@ -10,19 +10,19 @@ const Header = () => {
                 <img id="logo" src='https://placehold.jp/150x150.png'></img>
                 <ul>
                     <li>
-                        <Link href='/'>Home</Link>
+                        <Link href='/'><span className='link'>Home</span></Link>
                     </li>
                     <li>
-                        <Link href='about'>About</Link>
+                        <Link href='about'><span className='link'>About</span></Link>
                     </li>
                     <li>
-                        <Link href='work'>Works</Link>
+                        <Link href='works'><span className='link'>Works</span></Link>
                     </li>
                     <li>
-                        <Link href='article'>Article</Link>
+                        <Link href='article'><span className='link'>Article</span></Link>
                     </li>
                     <li>
-                        <Link href='contact'>Contact</Link>
+                        <Link href='contact'><span className='link'>Contact</span></Link>
                     </li>
  
 

@@ -20,10 +20,14 @@ const Homepage = () => {
             </li>
             <li id='work'>
                 <div className='title'>                  
-                    <h1 className='gradient-border'>Work</h1>
-                    <Arrow rel="work"/>
+                    <h1 className='gradient-border'>Works</h1>
+                    <Arrow rel="works"/>
                 </div>
+                <div className='slider'>
                 <Slider/>
+                </div>
+                    
+                
             </li>
         
             <li id='article'>
