@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Header from './header';
+
 import Homepage from './Homepage';
 import './home.css';
 

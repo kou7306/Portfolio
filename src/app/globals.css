@@ -9,7 +9,9 @@ body {
   justify-content: center;
   background-color: #0f0f0f;
   margin-top: 0;
+  display: relative;
 }
+
 
 .link:hover{
   color: #ef5fff;
