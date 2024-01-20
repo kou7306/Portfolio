@@ -7,9 +7,7 @@ body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-image: url('/images/black1.jpeg');
-  width: 80%;
-  margin-left: 20%;
+  background-color: #0f0f0f;
   margin-top: 0;
 }
 

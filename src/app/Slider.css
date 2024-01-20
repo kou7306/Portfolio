@@ -1,5 +1,6 @@
-.slideWrapper {
+.slide-wrapper .swiper-wrapper{
     max-width: 100%;
+    transition-timing-function: linear;
   }
   
   .slideImage {

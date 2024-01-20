@@ -42,17 +42,18 @@ export default function Slider() {
       breakpoints={slideSettings} // slidesPerViewを指定
       slidesPerView={"auto"} // ハイドレーションエラー対策
       centeredSlides={true} // スライドを中央に配置
+      loopedSlides = {3}
       loop={true} // スライドをループさせる
-      speed={1000} // スライドが切り替わる時の速度
+      speed={3000} // スライドが切り替わる時の速度
       autoplay={{
-        delay: 2500,
+        delay: 0,
         disableOnInteraction: false,
       }} // スライド表示時間
-      navigation // ナビゲーション（左右の矢印）
-      pagination={{
-        clickable: true,
-      }} // ページネーション, クリックで対象のスライドに切り替わる
-      className='slideWrapper'
+    //   navigation // ナビゲーション（左右の矢印）
+    //   pagination={{
+    //     clickable: true,
+    //   }} // ページネーション, クリックで対象のスライドに切り替わる
+      className='slide-wrapper'
     >
       {images.map((image, index) => (
         <SwiperSlide key={index}>

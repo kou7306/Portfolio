@@ -1,0 +1,11 @@
+.article-all{
+    display: flex;
+}
+
+.article-title{
+    width: 50vw;
+}
+
+.article-content{
+    width: 50vw;
+}

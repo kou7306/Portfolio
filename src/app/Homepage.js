@@ -1,8 +1,12 @@
 import React from 'react'
 import './Homepage.css';
 import Topimg from './Topimg'
-import Arrow from './Arrow';
+import ViewMoreButton from './ViewMoreButton';
 import Slider from './Slider';
+import AboutTop from './AboutTop';
+import Arrow from './Arrow';
+import ArticleTop from './ArticleTop';
+
 
 const Homepage = () => {
   return (
@@ -11,17 +15,13 @@ const Homepage = () => {
     <div className='homepage'>
         <ul>
             <li id='about'>
-                <div className='title'>                  
-                    <h1 className='gradient-border'>
-                        About</h1>
-                    <Arrow rel="about"/>
-                </div>
-                <p>私について</p>
+                <AboutTop/>
             </li>
             <li id='work'>
-                <div className='title'>                  
-                    <h1 className='gradient-border'>Works</h1>
+                <div className='work-title title'>                  
+                    <h1 className='work-title'>Works</h1>
                     <Arrow rel="works"/>
+                    
                 </div>
                 <div className='slider'>
                 <Slider/>
@@ -31,16 +31,12 @@ const Homepage = () => {
             </li>
         
             <li id='article'>
-                <div className='title'>                  
-                    <h1 className='gradient-border'>Article</h1>
-                    <Arrow rel="article"/>
-                </div>
-                <p>Zenn,Qiitaの記事</p>
+                <ArticleTop/>
             </li>
             <li id='contact'>
                 <div className='title'>                  
                     <h1 className='gradient-border'>Contact</h1>
-                    <Arrow rel="contact" />
+                    <ViewMoreButton rel="contact" />
                 </div>
                 <p>お問い合わせ</p>
             </li>

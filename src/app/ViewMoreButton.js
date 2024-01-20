@@ -1,15 +1,15 @@
 import React from 'react'
-
+import './ViewMoreButton.css';
 import Link from 'next/link';
 
-const Arrow = ({rel}) => {
+const ViewMoreButton = ({rel}) => {
     let url;
     console.log(rel)
     if (rel == 'about'){
         url='/about'
     }
-    else if (rel == 'works'){
-        url='/works'
+    else if (rel == 'work'){
+        url='/work'
     }
     else if (rel == 'article'){
         url='/article'
@@ -24,10 +24,10 @@ const Arrow = ({rel}) => {
 
     <div>
         <Link href={url}>
-        <span className='right-arrow link'>→</span>
+        <button className='custom-button'>VIEW MORE</button>
         </Link>
     </div>
   )
 }
 
-export default Arrow
+export default ViewMoreButton

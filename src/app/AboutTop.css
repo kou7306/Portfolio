@@ -1,0 +1,47 @@
+.about-all {
+    background-image: url("/images/img2.png");
+    color: white;
+    padding: 13px;
+    height: 100vh;
+    width: 100vw;   
+    background-repeat: no-repeat;
+    position: relative; 
+    background-size: cover
+    
+}
+
+.about-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* 背景全体を半透明の黒にする */
+}
+
+.about-contents {
+    position: absolute;
+    bottom: 150px;
+    left: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 50%;
+}
+
+.about-title {
+    font-size: 6.5rem;
+    font-weight: bold;
+    
+   
+}
+
+.about-detail {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+.about-button{
+    margin-left: 20%;
+}
