@@ -6,15 +6,18 @@ export default function Page() {
     <div className="App">
       <div className='about'>
       <div className='name'>
-        <h1>Kota Yahagi</h1>
-        <p>矢作恒太</p>
+        <div className='name-img'>
+          <img src='/images/icon.png' alt='icon' className='icon-img'/>
+        </div>
+        <div className='name-detail'>
+          <h1>Kota Yahagi</h1>
+          <p className='name-contents'>矢作恒太</p>
+          <p className='profile'>今大学３年でロボットの研究をしています。チーム開発が大好きです、趣味はアニメとサッカー観戦です。</p>
+        </div>
       </div>
 
-      <div className='profile'>
-        <h2 className='gradient-border'>Profile</h2>
-        <p>今大学３年でロボットの研究をしています。チーム開発が大好きです、趣味はアニメとサッカー観戦です。</p>
-      </div>
 
+      <div className='content-all'>
       <div className='affiliation'>
       <h2 className='gradient-border'>Affiliation</h2>
       <ul>
@@ -22,7 +25,7 @@ export default function Page() {
 
         <li>Student in Tsukuba University </li>
         <li>STECH</li>
-        <li>PlayGround</li>
+        
       </ul>
 
       </div>
@@ -73,7 +76,7 @@ export default function Page() {
         </dl>
       </div>
 
-      
+      </div>
     </div>
     </div>
   )

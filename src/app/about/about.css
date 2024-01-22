@@ -1,5 +1,6 @@
 .about{
     margin-left: 30px;
+    margin-top: 80px;
     color: #fff;
 }
 
@@ -8,23 +9,57 @@
 }
 
 .name{
-    margin: 20px 30% 0;
+  margin: 20px 5% 0;
+  display: flex;
+  justify-content: space-around;
 }
 
-h1{
-    font-size: 4rem;
+.name h1{
+    font-size: 6rem;
+    font-weight: bold;
 
 }
 
-p{
-    font-size: 1.5rem;
-    margin-left: 20px;
+.name p{
+  margin-left: 20px;
 }
+
+.name-contents{
+    font-size: 3rem;
+    
+}
+
+.profile{
+  font-size: 1.5rem;
+  margin-top: 30px;
+  
+}
+
+.name-detail{
+  width: 50%;
+}
+
+
 h2{
     font-size: 3rem;
 
     border-bottom: #ef5fff solid 3px;
     margin-bottom: 10px;
+}
+
+.content-all{
+  margin-left: 50px;
+  margin-top: 80px;
+}
+
+.affiliation ul{
+  margin-left: 80px;
+  font-size: 2.5rem;
+  list-style: square;
+}
+
+.skill{
+  margin-top: 80px;
 }
 
 
