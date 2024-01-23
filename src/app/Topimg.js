@@ -10,7 +10,7 @@ const Topimg = () => {
           <h1>Kota Yahagi</h1>
           <p>Web Engineer</p>
         </div>
-        <img className='top-img' src= "/images/img2.png"></img>
+        {/* <img className='top-img' src= "/images/img2.png"></img> */}
     </div>
 
   )

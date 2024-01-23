@@ -39,7 +39,7 @@ export default async function ArticleTop() {
             {data.map((item) => (
             <li key={item.id} className='article-content'>
                 <a href={item.url} className='article-item'>
-                    <p className='date'>{formatDate(item.updated_at)}</p>
+                    <p>{formatDate(item.updated_at)}</p>
                     <h2>{item.title}</h2>
                 </a>
             </li>

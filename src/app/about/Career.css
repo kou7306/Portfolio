@@ -3,32 +3,40 @@
     position: relative;
     display: flex;
     align-items: flex-start;
-
+    margin-top: 40px;
 }
 
 .circle{
     width: 50vw;
-    padding-bottom: 100%; /* アスペクト比を 1:1 に設定 */
-    border: 1px solid #ef5fff;
+     /* アスペクト比を 1:1 に設定 */
+    
     position: sticky;
-    top: 0;
+    top: 30%;
     left: 0;
-   
+    height: 900px;
+    
     transform: translateY(-25%);
     
 }
 
-
+.career .gradient-border{
+   margin: 120px 0 120px 120px ;
+   font-size: 4rem;
+   font-weight: bold;
+}
 
 .circle img{
     width: 58%;
-    height: 23%;
+    height: 30%;
+    
 
 }
 
 .detail-contents{
-    width: 30%;
-    height: 400vh;
+    width: 45%;
+    height: 260vh;
+    
+    border: 1px solid #fff;
 
 }
 #one{

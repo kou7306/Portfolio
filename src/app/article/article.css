@@ -2,8 +2,14 @@
     color: white;
 }
 
+.article h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 120px 60px;
+}
+
 .items {
     background-color: black;
-    margin: 20px 30px;
+    margin: 120px 30px;
 }
 

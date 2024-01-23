@@ -33,17 +33,25 @@ export default function Page() {
 
       <div className='skill'>
         <h2 className='gradient-border'>Skill</h2>
+        <h3>Language</h3>
         <ul className='skill-imgs'>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
-          <li><img className='skill-img' src="https://placehold.jp/50x50.png"/></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" /></li>
+
+        </ul>
+        <h3>Framework,Library</h3>
+        <ul className='skill-imgs'>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" /></li>
+          <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" /></li>
         </ul>
       </div>
 

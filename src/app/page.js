@@ -9,7 +9,7 @@ export default function Page() {
         
         <div className='Contents'>
           
-          <Homepage/>
+        <Homepage/>
           
         </div>
         

@@ -21,9 +21,7 @@ const Header = () => {
                     <li>
                         <Link href='article'><span className='link'>Article</span></Link>
                     </li>
-                    <li>
-                        <Link href='contact'><span className='link'>Contact</span></Link>
-                    </li>
+
  
 
                 </ul>
