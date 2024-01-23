@@ -1,5 +1,5 @@
 .about{
-    margin-left: 30px;
+    
     margin-top: 80px;
     color: #fff;
 }
@@ -40,18 +40,17 @@
 }
 
 
-h2{
-    font-size: 3rem;
 
-    border-bottom: #ef5fff solid 3px;
-    margin-bottom: 10px;
-}
 
 .content-all{
-  margin-left: 50px;
+  
   margin-top: 80px;
 }
 
+
+.affiliation{
+  margin-left: 50px;
+}
 .affiliation ul{
   margin-left: 80px;
   font-size: 2.5rem;
@@ -60,6 +59,7 @@ h2{
 
 .skill{
   margin-top: 80px;
+  margin-left: 50px;
 }
 
 
@@ -77,37 +77,3 @@ h2{
 
 
 
-/* 年表のデザイン */
-dl {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  dl dt {
-    text-align: right;
-    width: 8.5em;
-    padding: 0.5em 1.0em 0.5em 0.5em;
-    position: relative;
-  }
-  
-  dl dt::after {
-    content: '●';
-    position: absolute;
-    right: -0.55em;
-    top: 5px;
-    font-size: 22px;
-    color: green;
-  }
-  
-  dl dd {
-    width: calc(100% - 8.5em);
-    padding: 0.5em 2.0em 3.0em;
-    border-left: 2px solid #ccc;
-  }
-  
-  dl dd h2 {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0 0 5px;
-  }

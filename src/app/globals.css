@@ -25,6 +25,10 @@ html{
 .gradient-border {
   display: inline-block;
   width: 30%;
+  
+  font-size: 3rem;
+
+  margin-bottom: 10px;
   border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
   border-image: linear-gradient(to right, #ef5fff, #ffffff); /* グラデーションの色を指定 */
   border-image-slice: 1; /* グラデーションの適用範囲を設定 */

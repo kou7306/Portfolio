@@ -23,7 +23,7 @@ async function getData() {
 
 export default async function ArticleTop() {
    
-    const data = await getData()
+  const data = await getData()
     
   return (
     <div className='article-all'>

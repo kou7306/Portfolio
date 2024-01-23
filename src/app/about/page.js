@@ -1,5 +1,6 @@
 import React from 'react'
 import './about.css'
+import Career from './Career'
 
 export default function Page() {
   return (
@@ -46,35 +47,7 @@ export default function Page() {
         </ul>
       </div>
 
-      <div className='career'>
-        <h2 className='gradient-border'>Career</h2>
-        <dl>
-          <dt>1990年11月</dt>
-          <dd>
-            <h2 className='gradient-border'>日本に生まれる</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-          </dd>
-          <dt>1996年4月</dt>
-          <dd>
-            <h2 className='gradient-border'>小学校に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-          </dd>
-          <dt>2002年4月</dt>
-          <dd>
-            <h2 className='gradient-border'>中学校に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-          </dd>
-          <dt>2005年4月</dt>
-          <dd>
-            <h2 className='gradient-border'>高校に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-          </dd><dt>2008年4月</dt>
-          <dd>
-            <h2 className='gradient-border'>大学に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-          </dd>
-        </dl>
-      </div>
+      <Career/>
 
       </div>
     </div>

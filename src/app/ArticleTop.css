@@ -1,7 +1,7 @@
 .article-all{
     display: flex;
     color: white;
- 
+    align-items: flex-start;
     /* 仮の高さ、実際のページに合わせて調整してください */
 
 }
@@ -9,6 +9,12 @@
 .article-title{
     width: 40vw;
     margin-left: 40px;
+    height: 300px;
+   
+
+    position: sticky;
+    left: 0;
+    top: 90px;
 
 }
 
@@ -23,7 +29,14 @@
     margin-left: 5%;
     font-size: 1.5rem;
     margin-top: 50px;
+    height: 1000px;
     
+}
+
+.article-contents h2{
+    border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
+    border-image: linear-gradient(to right, #ef5fff, #ffffff);
+    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
 }
 
 
@@ -33,12 +46,6 @@
     margin-top: 20px;
 }
 
-.article-item{
-    display: flex;
-    border-bottom: #ef5fff solid 1px ;
-}
 
-.date{
-    width: 20%;
-}
+
 
