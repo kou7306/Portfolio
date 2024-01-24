@@ -1,34 +1,35 @@
 .works {
-    color: #000000; 
+    
     display: grid;
     margin: 120px 60px;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: minmax(100px, auto);
+   
+    color: #fff;
 
 }
 
 .work {
     margin: 7% 5%;;
     padding: 30px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* 白い影を追加 */
-    transition: box-shadow 0.3s ease-in-out; /* 影に変化をつけるアニメーション */
+    
+    
+
 }
 
+.work{
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 4px solid transparent; /* 基本の境界線 */
+  }
+  
 .work:hover {
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2); /* ホバー時の影の変化 */
-}
+    
+   
+    border-image: conic-gradient(from 0deg at 100% 0%, #ef5fff, #ffffff) 1;
+    
+    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+  }
 
 
-
-.work img {
-    margin: 0 auto;
-    
-    
-    width: 100%;
-    
-    
-}
 
 .work-detail {
     padding: 16px;

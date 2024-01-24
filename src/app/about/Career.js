@@ -21,10 +21,10 @@ const Career = () => {
         <div className='rotate-contents'>
   
           <div className='circle' >
-            <img src="/images/img1.png" id='one' alt="" />
-            <img src="/images/img4.png" id='two' alt="" />
+            <img src="/images/img6.png" id='one' alt="" />
+            <img src="/images/img7.png" id='two' alt="" />
             <img src="/images/img5.png" id='three' alt="" />
-            <img src="https://placehold.jp/50x50.png" id='four' alt="" />
+            <img src="/images/img1.png" id='four' alt="" />
           </div>
   
         <div className='detail-contents'>

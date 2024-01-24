@@ -1,11 +1,12 @@
 .article{
     color: white;
+    text-align: center;
 }
 
 .article h1{
     font-size: 4rem;
     font-weight: bold;
-    margin: 120px 60px;
+    margin: 120px 0px;
 }
 
 .items {
