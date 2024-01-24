@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Arrow.css'
 import Link from 'next/link';
 
 const Arrow = ({rel}) => {
@@ -22,11 +22,11 @@ const Arrow = ({rel}) => {
     }
   return (
 
-    <div>
+    <>
         <Link href={url}>
         <span className='right-arrow link'>→</span>
         </Link>
-    </div>
+    </>
   )
 }
 

@@ -11,6 +11,7 @@
 .name{
   margin: 20px 5% 0;
   display: flex;
+  height: 70vh;
   justify-content: space-around;
 }
 
@@ -66,7 +67,7 @@
 
 .skill h3{
   font-size: 3rem;
-  width: 70%;
+  width: 60%;
   margin-bottom: 30px;
   border-bottom: #fff 1px solid;
 }
@@ -84,7 +85,13 @@
     width: 100px;
 }
 
-.skill h2,.affiliation h2{
+.affiliation h2{
+  margin: 60px 0 60px 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.skill h2{
   margin: 120px 0 60px 0;
   font-size: 4rem;
   font-weight: bold;

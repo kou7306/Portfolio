@@ -25,7 +25,7 @@ export default function Slider() {
     // ブレイクポイントに基づいて1つのスライドに表示するスライドの数を指定
    const slideSettings = {
      0: {
-       slidesPerView: 3,
+       slidesPerView: 1,
        spaceBetween: 10,
      },
      1024: {
@@ -42,7 +42,7 @@ export default function Slider() {
       breakpoints={slideSettings} // slidesPerViewを指定
       slidesPerView={"auto"} // ハイドレーションエラー対策
       centeredSlides={true} // スライドを中央に配置
-      loopedSlides = {3}
+      loopedSlides = {slideSettings.slidesPerView}
       loop={true} // スライドをループさせる
       speed={3000} // スライドが切り替わる時の速度
       autoplay={{

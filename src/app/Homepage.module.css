@@ -87,27 +87,19 @@
     font-size: 4rem;
 }
 
-.contactImg{
-    width: 50px;
-    height: auto;
-   margin-top: 30px;
-}
-
-.contactImg svg{
-    width: 50px;
-}
-
-.github{
-    background-color: #fff;
-}
-
-.gitlink{
-    width: 50px;
-    height: auto;
-}
-
-.contactLink{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
+.custom-button {
+    background: linear-gradient(to right, #8e44ad, #ef5fff);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 300px;
+    height: 60px;
+    /* 他のスタイルを追加 */
+  }
+  
+  .custom-button:hover {
+    background: linear-gradient(to right, #6f2987, #b735b2); /* ホバー時のグラデーション（暗め） */
+  }

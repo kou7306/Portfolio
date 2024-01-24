@@ -5,9 +5,16 @@
     border-image-slice: 1; /* グラデーションの適用範囲を設定 */
     border-radius: 8px;
     padding: 16px 24px;
+    margin: 30px 60px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影をつける部分 */
+    transition: transform 0.3s ease-in-out;
 }
 
+
+  
+.item:hover {
+    transform: scale(1.01); /* 画像を10%拡大 */
+  }
 .tag {
     border: 2px solid #fff;
     border-radius: 8px;

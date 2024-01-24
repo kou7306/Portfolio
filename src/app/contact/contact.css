@@ -1,11 +1,12 @@
 .Form {
-    margin: 80px auto 0;
+    margin: 150px auto 0;
     max-width: 720px;
     color: white;
   }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form {
-    margin: 80px 40p 0;
+    margin: 150px 40p 0;
+    text-align: center;
 }
 }
 .Form-Item {
@@ -16,7 +17,7 @@ width: 100%;
 display: flex;
 align-items: center;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item {
     padding-left: 14px;
     padding-right: 14px;
@@ -35,7 +36,7 @@ letter-spacing: 0.05em;
 font-weight: bold;
 font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item-Label {
     max-width: inherit;
     display: flex;
@@ -47,7 +48,7 @@ font-size: 18px;
 margin-top: 8px;
 margin-bottom: auto;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item-Label.isMsg {
     margin-top: 0;
 }
@@ -64,7 +65,7 @@ background: linear-gradient(to right, #8e44ad, #ef5fff);
 color: #fff;
 font-size: 14px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item-Label-Required {
     border-radius: 4px;
     padding-top: 4px;
@@ -86,13 +87,13 @@ max-width: 410px;
 background: #eaedf2;
 font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item-Input {
-    margin-left: 0;
-    margin-top: 18px;
+
     height: 40px;
     flex: inherit;
     font-size: 15px;
+    margin: 18px auto 0;
 }
 }
 .Form-Item-Textarea {
@@ -108,10 +109,9 @@ max-width: 410px;
 background: #eaedf2;
 font-size: 18px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Item-Textarea {
-    margin-top: 18px;
-    margin-left: 0;
+    margin: 18px auto 0;
     height: 200px;
     flex: inherit;
     font-size: 15px;
@@ -132,7 +132,7 @@ color: #fff;
 font-weight: bold;
 font-size: 20px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
 .Form-Btn {
     margin-top: 24px;
     padding-top: 8px;
@@ -141,4 +141,42 @@ font-size: 20px;
     font-size: 16px;
 }
 }
+
+.contactImg{
+    width: 50px;
+    height: auto;
+   margin-top: 30px;
+}
+
+.contactImg svg{
+    width: 50px;
+}
+
+.github{
+    background-color: #fff;
+}
+
+.gitlink{
+    width: 50px;
+    height: auto;
+}
+
+.contactLink{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin:40px 0 100px
+}
+
+.otherTitle{
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.otherInfo{
+    text-align: center;
+    margin-top: 120px;
+}
+
 

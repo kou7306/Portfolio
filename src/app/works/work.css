@@ -7,39 +7,50 @@
     color: #fff;
 
 }
-
-.work {
-    margin: 7% 5%;;
-    padding: 30px;
-    
-    
-
-}
-
-.work{
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    border: 4px solid transparent; /* 基本の境界線 */
-  }
-  
-.work:hover {
-    
-   
-    border-image: conic-gradient(from 0deg at 100% 0%, #ef5fff, #ffffff) 1;
-    
-    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
-  }
-
-
-
-.work-detail {
-    padding: 16px;
-}
-
 .work-title {
     
     font-size: 3rem;
     font-weight: bold;
 }
+@media screen and (max-width: 720px) {
+    .works {
+    
+        display: grid;
+        margin: 60px 60px;
+        grid-template-columns: 1fr;
+       
+        color: #fff;
+    
+    }
+
+
+    }
+
+.work {
+    margin: 7% 5%;;
+    padding: 30px;
+
+}
+
+
+
+  .work-img {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .work-img:hover {
+    transform: scale(1.01); /* 画像を10%拡大 */
+  }
+
+
+.work-detail {
+    padding: 16px;
+    font-size: 1.5rem;
+}
+
+
+
+
 
 .work_title{
     font-size: 4rem;
