@@ -1,7 +1,12 @@
 .article{
     color: white;
+    
+}
+
+.articleTitle{
     text-align: center;
 }
+
 
 .article h1{
     font-size: 4rem;

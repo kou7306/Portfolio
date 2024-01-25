@@ -36,7 +36,7 @@ export default async function ArticleTop() {
             
         </div>
         <ul className='article-contents'>
-            {data.map((item) => (
+            {data.slice(0, 5).map((item) => (
             <li key={item.id} className='article-content'>
                 <a href={item.url} className='article-item'>
                     <p>{formatDate(item.updated_at)}</p>

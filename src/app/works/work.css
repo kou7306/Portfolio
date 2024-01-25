@@ -3,15 +3,12 @@
     display: grid;
     margin: 120px 60px;
     grid-template-columns: 1fr 1fr;
+    gap: 5%;
    
     color: #fff;
 
 }
-.work-title {
-    
-    font-size: 3rem;
-    font-weight: bold;
-}
+
 @media screen and (max-width: 720px) {
     .works {
     
@@ -27,15 +24,47 @@
     }
 
 .work {
-    margin: 7% 5%;;
-    padding: 30px;
+    margin: 3% 5%;;
 
+
+}
+.work-img-container {
+    position: relative;
+    width: 100%; 
+    height: 0; /* 最初は高さを0に設定 */
+    padding-top: 56.25%; 
+    /* 他のスタイルが必要な場合はここに追加 */
+}
+
+.work-detail {
+    
+    position: absolute;
+    bottom: 0%; /* 下部に配置 */
+    display: none;
+    
+    width: 100%;
+    
+     /* デフォルトでは非表示 */
+    /* 必要に応じて背景色、パディング、テキストのスタイルを追加 */
+    background-color: rgba(0, 0, 0, 0.5); /* 例: 半透明の黒 */
+    color: #fff;
+    padding: 20px;
+    
+}
+
+.work-title{
+    font-size: 2rem;
+    width: 100%;
+}
+.work-img-container:hover .work-detail {
+    display: block; /* マウスオーバー時に表示 */
 }
 
 
 
   .work-img {
     transition: transform 0.3s ease-in-out;
+    width: 100%;
   }
   
   .work-img:hover {
@@ -43,20 +72,6 @@
   }
 
 
-.work-detail {
-    padding: 16px;
-    font-size: 1.5rem;
-}
-
-
-
-
-
-.work_title{
-    font-size: 4rem;
-    font-weight: bold;
-    color: #fff;
-}
 
 
 .work_page{
@@ -64,3 +79,9 @@
     margin-top: 120px;
 }
 
+.work_title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 120px 0px;
+    color: #fff;
+}

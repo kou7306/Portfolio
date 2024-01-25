@@ -2,9 +2,14 @@
 import React, { useState, useRef } from 'react';
 import './Career.css'
 import Target from './Target'
+import { client } from '../../../libs/client'
 
-const Career = () => {
+export default async function Career(){
+
+    const career = await client.get({ endpoint: 'career' });
+    const datas = career.contents;
     const [flag, setFlag] = useState([true, false, false, false, false]);
+
 
     const Updateflag = (index, isIn) => {
         // ここで `flag` を更新するなどの処理を行う
@@ -38,4 +43,4 @@ const Career = () => {
     );
   }
   
-  export default Career;
+  

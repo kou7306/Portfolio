@@ -18,11 +18,13 @@ export default async function Page() {
         <li className='work frame' key={work.id} >
           <a className='work-img-container' href={`/works/${work.id}`} >        
               <img className='work-img' src={work.work_imgs[0].url} alt={work.work_name} />
-          </a>
-          <div className='work-detail'>
+              <div className='work-detail'>
                 <h2 className='work-title'>{work.work_name}</h2>
-                <p className='work-ex'>{work.easy}</p>
-          </div>
+                {/* <p className='work-ex'>{work.easy}</p> */}
+            </div>
+          </a>
+
+
         </li>
       ))}
       </ul>
