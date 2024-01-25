@@ -98,3 +98,28 @@
 }
 
 
+.contactImg{
+  width: 50px;
+  height: auto;
+ margin-top: 30px;
+}
+
+.contactImg svg{
+  width: 50px;
+}
+
+.github{
+  background-color: #fff;
+}
+
+.gitlink{
+  width: 50px;
+  height: auto;
+}
+
+.contactLink{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin:40px 0 100px
+}

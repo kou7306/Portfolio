@@ -2,12 +2,10 @@
 import React, { useState, useRef } from 'react';
 import './Career.css'
 import Target from './Target'
-import { client } from '../../../libs/client'
 
-export default async function Career(){
 
-    const career = await client.get({ endpoint: 'career' });
-    const datas = career.contents;
+export default function Career({datas}){
+    
     const [flag, setFlag] = useState([true, false, false, false, false]);
 
 
@@ -33,10 +31,14 @@ export default async function Career(){
           </div>
   
         <div className='detail-contents'>
-            <Target index={1} flag={flag} Updateflag={Updateflag} />
-            <Target index={2} flag={flag} Updateflag={Updateflag}  />
-            <Target index={3} flag={flag} Updateflag={Updateflag}  />
-            <Target index={4} flag={flag} Updateflag={Updateflag}  />
+        {datas.map((data, index) => (
+        <Target
+          index={index}
+          flag={flag[index]}
+          Updateflag={Updateflag}
+          data={data} // ここでデータを渡す
+        />
+))}
         </div>
         </div>
       </div>

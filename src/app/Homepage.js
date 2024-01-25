@@ -6,9 +6,7 @@ import Slider from './Slider';
 import AboutTop from './AboutTop';
 import Arrow from './Arrow';
 import ArticleTop from './ArticleTop';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
-import Link from 'next/link';
+
 
 const Homepage = () => {
   return (

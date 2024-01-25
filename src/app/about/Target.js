@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from 'react';
 import './Target.css';
 
-const Target = ({ index, flag, Updateflag }) => {
+const Target = ({ index, flag, Updateflag, data }) => {
     const targetElementRef = useRef(null);
     
     
@@ -99,32 +99,12 @@ const Target = ({ index, flag, Updateflag }) => {
   return (
   
     <div ref={targetElementRef} className="targetElement">
-        {/* indexによって異なるコンテンツを表示 */}
-        {index === 1 && (
+      
         <div className='target-contents'>
-            <h2 className='career-h2' >日本に生まれる</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
+            <h2 className='career-h2' >{data.title}</h2>
+            <p>{data.detail}</p>
         </div>
-        )}
-        {index === 2 && (
-        <div className='target-contents'>
-            <h2 className='career-h2' >小学校に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-        </div>
-        )}
-        {index === 3 && (
-        <div className='target-contents'>
-            <h2 className='career-h2' >中学校に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-        </div>
-        )}
-        {index === 4 && (
-        <div className='target-contents'>
-            <h2 className='career-h2' >大学に入学</h2>
-            <p>詳細な文章が入ります。詳細な文章が入ります。詳細な文章が入ります。</p>
-        </div>
-        )}
-        {/* 追加の条件に基づいて他のコンテンツを表示可能 */}
+       
     </div>
     
     
