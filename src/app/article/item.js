@@ -1,8 +1,8 @@
 import React from 'react'
 import './item.css'
-const accessToken = process.env.QIITA_ACCESS_TOKEN;
-
-
+// const keys = require('../../../key.json');
+// const accessToken = keys.QIITA_ACCESS_TOKEN;
+const accessToken = process.env.QIITA_ACCESSTOKEN;
 
 async function getData() {
   const res = await fetch('https://qiita.com/api/v2/authenticated_user/items', {
