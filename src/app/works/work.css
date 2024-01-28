@@ -19,15 +19,13 @@
         color: #fff;
     
     }
-
-
-    }
+}
 
 .work {
-    margin: 3% 5%;;
-
-
+    margin: 3% 5%;
 }
+
+
 .work-img-container {
     position: relative;
     width: 100%; 
@@ -60,16 +58,16 @@
     display: block; /* マウスオーバー時に表示 */
 }
 
+.work-img {
+transition: transform 0.3s ease-in-out;
+width: 100%;
+}
 
 
-  .work-img {
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-  }
   
-  .work-img:hover {
+.work-img:hover {
     transform: scale(1.01); /* 画像を10%拡大 */
-  }
+}
 
 
 
