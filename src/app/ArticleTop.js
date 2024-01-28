@@ -3,7 +3,7 @@ import React from 'react'
 
 import './ArticleTop.css';
 import ViewMoreButton from './ViewMoreButton';
-const accessToken = process.env.QIITA_ACCESS_TOKEN;
+const accessToken = process.env.QIITA_ACCESSTOKEN;
 
 
 
