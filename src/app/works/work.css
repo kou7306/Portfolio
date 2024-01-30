@@ -17,7 +17,7 @@
         grid-template-columns: 1fr;
        
         color: #fff;
-    
+        grid-auto-rows: 200px;
     }
 }
 

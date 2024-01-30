@@ -46,18 +46,39 @@ export default async function Page() {
         <h2 className='gradient-border'>Skill</h2>
         <h3>Language</h3>
         <ul className='skill-imgs'>
-        {datas.map((skill) => (
-        <li key={skill.id}>
-          <div className='skill-con'>
-            <img src={`${skill.img}`}/>
-            <p>{skill.detail}</p>
-          </div>
-          
+        {datas.filter(skill => skill.category === 1).map((skill) => (
+          <li key={skill.id}>
+            <div className='skill-con'>
+              <img src={`${skill.img}`} alt={skill.detail}/>
+              <p>{skill.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
 
+      <h3>Framework,Library</h3>
+        <ul className='skill-imgs'>
+        {datas.filter(skill => skill.category === 2).map((skill) => (
+          <li key={skill.id}>
+            <div className='skill-con'>
+              <img src={`${skill.img}`} alt={skill.detail}/>
+              <p>{skill.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
 
-        </li>
-      ))}
-        </ul>
+      <h3>Others</h3>
+        <ul className='skill-imgs'>
+        {datas.filter(skill => skill.category === 3).map((skill) => (
+          <li key={skill.id}>
+            <div className='skill-con'>
+              <img src={`${skill.img}`} alt={skill.detail}/>
+              <p>{skill.detail}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
 {/*           <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></li>
           <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></li>
           <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></li>

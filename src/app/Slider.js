@@ -21,7 +21,7 @@ export default function Slider({images}) {
        slidesPerView: 1,
        spaceBetween: 10,
      },
-     1024: {
+     700: {
        slidesPerView: 3,
        spaceBetween: 2,
      },
@@ -30,12 +30,13 @@ export default function Slider({images}) {
 
   return (
     <>
-           <Swiper
+    <Swiper
       modules={[Navigation, Pagination, Autoplay]}
       breakpoints={slideSettings} // slidesPerViewを指定
       slidesPerView={"auto"} // ハイドレーションエラー対策
       centeredSlides={true} // スライドを中央に配置
       loopedSlides = {slideSettings.slidesPerView}
+      spaceBetween={100} // スライド間の余白
       loop={true} // スライドをループさせる
       speed={3000} // スライドが切り替わる時の速度
       autoplay={{
