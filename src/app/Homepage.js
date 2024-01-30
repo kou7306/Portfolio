@@ -2,10 +2,10 @@ import React from 'react'
 import styles from './Homepage.module.css';
 import Topimg from './Topimg'
 import ViewMoreButton from './ViewMoreButton';
-import Slider from './Slider';
 import AboutTop from './AboutTop';
 import Arrow from './Arrow';
 import ArticleTop from './ArticleTop';
+import Get_works from './get_works';
 
 
 const Homepage = () => {
@@ -24,7 +24,7 @@ const Homepage = () => {
                     
                 </div>
                 <div className={styles.slider}>
-                <Slider/>
+                <Get_works/>
                 </div>
                     
                 

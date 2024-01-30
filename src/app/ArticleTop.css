@@ -35,7 +35,7 @@
 
 .article-contents h2{
     border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
-    border-image: linear-gradient(to right, #ef5fff, #ffffff);
+    border-image: linear-gradient(to right, #60a5ff, #ffffff);
     border-image-slice: 1; /* グラデーションの適用範囲を設定 */
 }
 

@@ -61,7 +61,7 @@ padding-bottom: 8px;
 width: 48px;
 display: inline-block;
 text-align: center;
-background: linear-gradient(to right, #8e44ad, #ef5fff);
+background: linear-gradient(to right, #60a5ff, #3498db);
 color: #fff;
 font-size: 14px;
 }
@@ -127,7 +127,7 @@ padding-bottom: 20px;
 width: 280px;
 display: block;
 letter-spacing: 0.05em;
-background: linear-gradient(to right, #8e44ad, #ef5fff);
+background: linear-gradient(to right, #60a5ff, #3498db);
 color: #fff;
 font-weight: bold;
 font-size: 20px;

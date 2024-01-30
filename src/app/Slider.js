@@ -1,6 +1,6 @@
-"use client";
-
+'use client';
 import React from 'react'
+
 
 // オプションをインポートする
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -10,18 +10,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import './Slider.css';
 
-// publicフォルダの画像
-const images = [
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
-    "https://placehold.jp/150x150.png",
+
+export default function Slider({images}) {
     
-  ];
-export default function Slider() {
+
+
     // ブレイクポイントに基づいて1つのスライドに表示するスライドの数を指定
    const slideSettings = {
      0: {

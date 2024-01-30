@@ -28,7 +28,7 @@
 .nav ul{
     list-style: none;  
     
-    margin-right: 50px;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -42,7 +42,7 @@
 }
 
 .link:hover{
-    color: #ef5fff;
+    color: #60a5ff;
 }
 
 
