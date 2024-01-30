@@ -7,7 +7,10 @@ const Header = () => {
         <div className='header'>
 
             <nav className='nav'>
-                <img id="logo" src='https://placehold.jp/150x150.png'></img>
+                <div class="animated-text">
+                <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
+                </div>
+
                 <ul>
                     <li>
                         <Link href='/'><span className='link'>Home</span></Link>

@@ -1,6 +1,6 @@
 .header{
     text-align: center;
-    margin: 0;
+    margin-top: 30px;
     position: fixed;
     left: 0;
     top: 0;
@@ -28,7 +28,7 @@
 .nav ul{
     list-style: none;  
     
-    
+    margin-right: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -52,3 +52,45 @@
 }
 
 
+.animated-text {
+    display: flex;
+}
+
+.animated-text span {
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards, reset 6s 10s infinite;
+    margin-left: 10px;
+    font-size: 1.5rem;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes reset {
+    to {
+        opacity: 0;
+      }
+  }
+  .animated-text span:nth-child(1) {
+    animation-delay: 0s, 5s;
+  }
+  
+  .animated-text span:nth-child(2) {
+    animation-delay: 1s, 6s;
+  }
+  
+  .animated-text span:nth-child(3) {
+    animation-delay: 2s, 7s;
+  }
+  
+  .animated-text span:nth-child(4) {
+    animation-delay: 3s, 8s;
+  }
+  
+  .animated-text span:nth-child(5) {
+    animation-delay: 4s, 9s;
+  }
+  

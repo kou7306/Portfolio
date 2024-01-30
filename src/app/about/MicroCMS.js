@@ -1,5 +1,5 @@
 import React from 'react'
-import Career from './Career'
+import Career2 from './Career2'
 import { client } from '../../../libs/client'
 
 export default async function MicroCMS () {
@@ -7,5 +7,5 @@ export default async function MicroCMS () {
     const datas = career.contents;
 
 
-  return <Career datas={datas} />
+  return <Career2 datas={datas} />
 }

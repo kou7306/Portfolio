@@ -98,13 +98,13 @@
 }
 
 
-.contactImg{
+.snsImg{
   width: 50px;
   height: auto;
  margin-top: 30px;
 }
 
-.contactImg svg{
+.snsImg svg{
   width: 50px;
 }
 
@@ -117,7 +117,7 @@
   height: auto;
 }
 
-.contactLink{
+.snsLink{
   display: flex;
   justify-content: center;
   gap: 40px;

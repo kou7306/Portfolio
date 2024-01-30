@@ -34,7 +34,7 @@ const ThreeBackground = () => {
     
     const canvas = document.querySelector("#webgl");
 // 親要素のサイズを取得
-    let parentElement = document.getElementById('app');
+    // let parentElement = document.getElementById('app');
     //Sizes
     // const sizes = {
     //   width: parentElement.clientWidth,
@@ -183,10 +183,10 @@ const ThreeBackground = () => {
     //ブラウザのリサイズ操作
     window.addEventListener("resize", () => {
       
-      let parentElement = document.getElementById('app');
+      
       let sizes = {
-        width: parentElement.clientWidth,
-        height: parentElement.clientWidth,
+        width: window.innerWidth,
+        height: window.innerHeight,
       };
       camera.aspect = sizes.width / sizes.height;
       camera.updateProjectionMatrix();
@@ -215,9 +215,9 @@ const ThreeBackground = () => {
   }, []);
 
   return (
-    <div id="app" style={{ width: '100%', height: '100%', overflow: 'hidden' }}>
-      <canvas id="webgl" ></canvas>
-    </div>
+    
+    <canvas id="webgl" ></canvas>
+   
   );
 };
 

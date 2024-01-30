@@ -1,0 +1,24 @@
+.careerCon{
+    list-style: none;
+    text-align: center;
+    padding-left: 60%;
+    border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
+    border-image: linear-gradient(to right, #60a5ff, #ffffff);
+    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+    width: 100%;
+}
+
+.careerAll{
+    
+    margin: 0 80px;
+}
+.careerTopic{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.careerDetail{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
