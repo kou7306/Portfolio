@@ -1,6 +1,6 @@
 'use client';
 import React from 'react'
-
+import Link from 'next/link';
 
 // オプションをインポートする
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -11,14 +11,14 @@ import "swiper/css/pagination";
 import './Slider.css';
 
 
-export default function Slider({images}) {
+export default function Slider({datas}) {
     
 
 
     // ブレイクポイントに基づいて1つのスライドに表示するスライドの数を指定
    const slideSettings = {
      0: {
-       slidesPerView: 1,
+       slidesPerView: 2,
        spaceBetween: 20,
      },
      768: {
@@ -48,9 +48,11 @@ export default function Slider({images}) {
     //   }} // ページネーション, クリックで対象のスライドに切り替わる
       className='slide-wrapper'
     >
-      {images.map((image, index) => (
+      {datas.map((data, index) => (
         <SwiperSlide key={index}>
-          <img src={image} className='slideImage' alt={`Slide ${index + 1}`} />
+          <Link href={`/works/${data.id}`}>
+          <img src={data.imageUrl} className='slideImage' alt={`Slide ${index + 1}`} />
+          </Link>
         </SwiperSlide>
       ))}
     </Swiper>
