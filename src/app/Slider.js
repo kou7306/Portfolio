@@ -19,11 +19,11 @@ export default function Slider({images}) {
    const slideSettings = {
      0: {
        slidesPerView: 1,
-       spaceBetween: 10,
+       spaceBetween: 20,
      },
      700: {
        slidesPerView: 3,
-       spaceBetween: 2,
+       spaceBetween: 30,
      },
    };
 
@@ -36,7 +36,6 @@ export default function Slider({images}) {
       slidesPerView={"auto"} // ハイドレーションエラー対策
       centeredSlides={true} // スライドを中央に配置
       loopedSlides = {slideSettings.slidesPerView}
-      spaceBetween={100} // スライド間の余白
       loop={true} // スライドをループさせる
       speed={3000} // スライドが切り替わる時の速度
       autoplay={{

@@ -3,16 +3,26 @@
     background: linear-gradient(to right, #60a5ff, #3498db);
     color: white;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 300px;
-    height: 60px;
+    width: 100%;
+    height: 100%;
     /* 他のスタイルを追加 */
   }
   
   .custom-button:hover {
     /* background: linear-gradient(to right, #6f2987, #b735b2); ホバー時のグラデーション（暗め） */
     background: linear-gradient(to right, #4a90e2, #2980b9);
+  }
+
+  .view-con{
+    width: 100%;
+    height: 100%;
+  }
+
+  .view-con a{
+    width: 100%;
+    height: 100%;
   }

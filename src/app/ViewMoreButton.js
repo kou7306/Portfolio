@@ -22,7 +22,7 @@ const ViewMoreButton = ({rel}) => {
     }
   return (
 
-    <div>
+    <div className='view-con'>
         <Link href={url}>
         <button className='custom-button'>VIEW MORE</button>
         </Link>

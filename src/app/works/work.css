@@ -2,11 +2,11 @@
     
     display: grid;
     margin: 120px 60px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2つの列を均等に配置 */
     gap: 5%;
    
     color: #fff;
-
+    grid-auto-rows: repeat(1fr); 
 }
 
 @media screen and (max-width: 720px) {
@@ -17,7 +17,7 @@
         grid-template-columns: 1fr;
        
         color: #fff;
-        grid-auto-rows: 200px;
+    
     }
 }
 
@@ -75,6 +75,7 @@ width: 100%;
 .work_page{
     text-align: center;
     margin-top: 120px;
+    margin-bottom: 120px;
 }
 
 .work_title{
