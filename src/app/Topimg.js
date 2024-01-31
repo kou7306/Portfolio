@@ -8,7 +8,7 @@ const Topimg = () => {
         
         <div className='top-text canvas'>
           <h1>Kota Yahagi</h1>
-          <p>university student</p>
+          <p>University Student</p>
         </div>
         {/* <img className='top-img' src= "/images/img2.png"></img> */}
     </div>
