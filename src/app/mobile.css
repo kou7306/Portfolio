@@ -48,9 +48,6 @@ nav .inner ul{
     transition-duration: 0.2s;
 }
 
-.navlist a:hover{
-    background-color: #f2f2f2;
-}
 
 .toggle-btn{
     display: block;
