@@ -118,6 +118,10 @@ nav .inner ul{
     display: flex;
 }
 
+.mobile-animated-text a {
+    margin-left: 15px;
+}
+
 .mobile-animated-text span {
     color: #fff;
     opacity: 0;

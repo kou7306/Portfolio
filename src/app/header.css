@@ -56,6 +56,10 @@
     display: flex;
 }
 
+.animated-text a {
+  margin-left: 20px;
+}
+
 .animated-text span {
     color: #fff;
     opacity: 0;
