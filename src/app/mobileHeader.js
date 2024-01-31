@@ -49,8 +49,12 @@ function Header() {
   // モバイル表示用のハンバーガーメニュー
   if (isMobile) {
     return (
+
       // ハンバーガーメニューのコンポーネントをここに表示
       <div className={`navArea ${isOpen ? 'open' : ''}`}>
+        <div class="mobile-animated-text">
+        <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
+        </div>
         <nav className='mobile'>
             <div className='inner'>
                 <ul>
