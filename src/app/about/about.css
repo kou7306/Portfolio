@@ -186,18 +186,10 @@
 }
 
 
-.affiliation{
-  margin-left: 10%;
-}
 .affiliation ul{
   margin-left: 20px;
   font-size: 2.5rem;
   list-style: square;
-}
-
-.skill{
-  margin-top: 5%;
-  margin-left: 5%;
 }
 
 .skill h3{
