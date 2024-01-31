@@ -112,6 +112,7 @@ nav .inner ul{
     position: fixed;
     top: 30px;
     leftt: 30px;
+    z-index: 99;
 }
 
 .mobile-animated-text {

@@ -54,6 +54,7 @@
 
 .animated-text {
     display: flex;
+    z-index: 99;
 }
 
 .animated-text a {
