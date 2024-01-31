@@ -4,7 +4,7 @@
     margin: 120px 60px;
     grid-template-columns: repeat(2, 1fr); /* 2つの列を均等に配置 */
     gap: 5%;
-   
+    
     color: #fff;
     grid-auto-rows: repeat(1fr); 
 }
@@ -31,7 +31,8 @@
     width: 100%; 
     height: 0; /* 最初は高さを0に設定 */
     padding-top: 56.25%; 
-    /* 他のスタイルが必要な場合はここに追加 */
+
+
 }
 
 .work-detail {
@@ -59,8 +60,9 @@
 }
 
 .work-img {
-transition: transform 0.3s ease-in-out;
-width: 100%;
+    transition: transform 0.3s ease-in-out;
+    width: 80%;
+    margin: 0 auto;
 }
 
 
@@ -76,6 +78,7 @@ width: 100%;
     text-align: center;
     margin-top: 120px;
     margin-bottom: 120px;
+
 }
 
 .work_title{

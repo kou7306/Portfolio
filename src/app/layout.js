@@ -1,7 +1,7 @@
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Header from './header';
 import ThreeBackground from './ThreeBackground';
+import Header from './mobileHeader';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="ja">
       <body className={inter.className}>
       <ThreeBackground/>
-      <Header className="head"/>
+      <Header/>
       
         {children}
         <script src="/script.js" />

@@ -21,7 +21,7 @@ export default function Slider({images}) {
        slidesPerView: 1,
        spaceBetween: 20,
      },
-     700: {
+     768: {
        slidesPerView: 3,
        spaceBetween: 30,
      },
