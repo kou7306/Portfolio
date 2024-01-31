@@ -58,7 +58,7 @@ function Header() {
         <nav className='mobile'>
             <div className='inner'>
                 <ul>
-                    <li className='navlist'><Link href='/' onClick={closeMenu}><span className='link'>Home</span></Link></li>
+                    <li className='navlist'><Link href='/' onClick={closeMenu}><span className='link'>Top</span></Link></li>
                     <li className='navlist'><Link href='/about' onClick={closeMenu}><span className='link'>About</span></Link></li>
                     <li className='navlist'><Link href='/works' onClick={closeMenu}><span className='link'>Works</span></Link></li>
                     <li className='navlist'><Link href='/article' onClick={closeMenu}><span className='link'>Article</span></Link></li>
@@ -87,7 +87,7 @@ function Header() {
 
           <ul>
               <li>
-                  <Link href='/'><span className='link'>Home</span></Link>
+                  <Link href='/'><span className='link'>Top</span></Link>
               </li>
               <li>
                   <Link href='/about'><span className='link'>About</span></Link>
