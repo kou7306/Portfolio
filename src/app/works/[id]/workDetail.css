@@ -25,7 +25,6 @@
 
 .workDetail * {
     overflow-wrap: break-word;
-    width:100%;
   }
   
   .workDetail  a{
@@ -34,4 +33,9 @@
 
   .workDetail  a:hover{
     color: #60a5ff;
+  }
+
+  .workDetail  img{
+    width:50%;
+    margin: 0 auto;
   }
