@@ -1,6 +1,6 @@
 .workALL{
     color: #fff;
-    margin: 120px 10%;
+    margin: 120px 20%;
 }
 
 .workALL h1{
@@ -13,7 +13,8 @@
 }
 
 .workALL img{
-    margin: 20px auto;
+    margin: 10% auto;
+    width: 100%;
 }
 
 .workDetail{
