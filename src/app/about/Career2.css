@@ -1,4 +1,7 @@
-
+.careers{
+    margin-top: 5%;
+    margin-left: 8%;
+}
 .timeline{
     position: relative;
     max-width: 1200px;
@@ -23,6 +26,13 @@
     border-radius: 6px;
     font-size: 1.4rem;
     width: 100%;
+}
+
+.careers h2{
+    margin-left: 10%;
+    margin: 120px 0 60px 0;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .careerTopic{

@@ -32,10 +32,9 @@
 
 
 .about-button{
-    width: 80%;
+    width: 60%;
     height: 100%;
-    margin-left: 5%;
-    margin-top: 7%;
+    margin: 7% 30% 0 10%;
 }
 
 @media screen and (max-width: 720px) {
@@ -65,9 +64,9 @@
     }
 
     .about-button{
-        width: 80%;
+        width: 60%;
         height: 100%;
-        margin: 7% 10% 0 10%;
+        margin: 7% 20% 0 20%;
         
       
     }

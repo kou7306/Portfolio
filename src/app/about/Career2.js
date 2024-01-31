@@ -3,8 +3,10 @@ import './Career2.css';
 
 const Career2 = ({datas}) => {
   return (
+    <div className='careers'>
+    <h2 className='gradient-border'>Career</h2>
     <div className='timeline'>
-      
+        
         {datas.map((data, index) => (
           <li className={`careerCon ${index % 2 === 0 ? 'left-container' : 'right-container'}`}>
             <img src="/images/pin.png"/>
@@ -17,7 +19,7 @@ const Career2 = ({datas}) => {
         ))}
       </div>
 
-    
+      </div>
   )
 }
 
