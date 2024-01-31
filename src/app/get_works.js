@@ -5,7 +5,13 @@ import Slider from './Slider';
 
 
 export default async function Get_works () {
-    const works = await client.get({ endpoint: 'works' });
+    const works =     await client.get({ 
+        endpoint: 'works',
+        queries: {
+          limit: 100, // 取得するレコード数
+          offset: 0, // オフセット値
+        },
+       });
     const datas = works.contents;
     const dataSets = []; // IDと画像URLのセットを格納する配列
 

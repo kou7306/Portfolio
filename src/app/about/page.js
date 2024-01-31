@@ -4,7 +4,13 @@ import MicroCMS from './MicroCMS'
 import { client } from '../../../libs/client'
 
 export default async function Page() {
-  const skill = await client.get({ endpoint: 'skill' });
+  const skill = await client.get({ 
+    endpoint: 'skill',
+    queries: {
+      limit: 100, // 取得するレコード数
+      offset: 0, // オフセット値
+    },
+   });
   const datas = skill.contents;
   console.log(datas)
 

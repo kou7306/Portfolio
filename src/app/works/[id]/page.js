@@ -11,8 +11,13 @@ export default async function WorkPage({
 
     const work = await client.get({
         endpoint: 'works', // MicroCMSのコンテンツタイプ名に置き換えてください
+        queries: {
+            limit: 100, // 取得するレコード数
+            offset: 0, // オフセット値
+          },
         contentId: workId
     });
+    
     const data = work;    
 
     return (
