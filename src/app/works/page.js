@@ -11,7 +11,10 @@ export default async function Page() {
   return (
   
     <div className='work_page'>
+      <div className='co'>
       <h1 className='work_title'>Works</h1>
+      </div>
+      
       <ul className='works'>
       {datas.map((work) => (
         <li className='work frame' key={work.id} >
