@@ -8,7 +8,6 @@ export default async function Page() {
   const works = await client.get({ endpoint: 'works' });
   const datas = works.contents;
 
-
   return (
   
     <div className='work_page'>
@@ -23,14 +22,9 @@ export default async function Page() {
                 {/* <p className='work-ex'>{work.easy}</p> */}
             </div>
           </Link>
-
-
         </li>
       ))}
       </ul>
     </div>
   );
 };
-
-
-

@@ -53,7 +53,7 @@ function Header() {
       // ハンバーガーメニューのコンポーネントをここに表示
       <div className={`navArea ${isOpen ? 'open' : ''}`}>
         <div class="mobile-animated-text">
-        <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
+        <Link href='/'><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span></Link>
         </div>
         <nav className='mobile'>
             <div className='inner'>
@@ -82,7 +82,7 @@ function Header() {
 
       <nav className='nav'>
           <div class="animated-text">
-          <span>H</span><span>e</span><span>l</span><span>l</span><span>o</span>
+          <Link href='/'><span>H</span><span>e</span><span>l</span><span>l</span><span>o</span></Link>
           </div>
 
           <ul>

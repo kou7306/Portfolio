@@ -7,7 +7,7 @@ const Topimg = () => {
      <div className='img-container text-overlay'>
         
         <div className='top-text canvas'>
-          <h1>Kota Yahagi's Portfolio</h1>
+          <h1>Kota Yahagi Portfolio</h1>
           
         </div>
         {/* <img className='top-img' src= "/images/img2.png"></img> */}
