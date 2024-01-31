@@ -18,5 +18,12 @@
 
 .workDetail{
     margin-top: 50px;
+    width:100%;
     font-size: 2rem;
 }
+
+.workDetail * {
+    overflow-wrap: break-word;
+    width:100%;
+  }
+  
