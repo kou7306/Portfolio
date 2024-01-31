@@ -30,7 +30,7 @@ export default function Page() {
     </div>
 
   <div className="contactLink">
-  <p>XのDMでの問い合わせをお願いします。</p>
+  <p>Xでの問い合わせをお願いします。</p>
   <a href='https://twitter.com/amatuzi7306' className="contactImage"><img src="/images/x.png"/></a>
   
   </div>
