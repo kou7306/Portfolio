@@ -13,6 +13,12 @@ function Header() {
     setIsOpen(!isOpen);
   };
 
+  // リンクをクリックしたらメニューを閉じる
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+  
+
   useEffect(() => {
     // 画面サイズが変更されたときに実行
     function handleResize() {
@@ -48,11 +54,11 @@ function Header() {
         <nav className='mobile'>
             <div className='inner'>
                 <ul>
-                    <li className='navlist'><Link href='/'><span className='link'>Home</span></Link></li>
-                    <li className='navlist'><Link href='about'><span className='link'>About</span></Link></li>
-                    <li className='navlist'><Link href='works'><span className='link'>Works</span></Link></li>
-                    <li className='navlist'><Link href='article'><span className='link'>Article</span></Link></li>
-                    <li className='navlist'><Link href='contact'><span className='link'>Contact</span></Link></li>
+                    <li className='navlist'><Link href='/' onClick={closeMenu}><span className='link'>Home</span></Link></li>
+                    <li className='navlist'><Link href='about' onClick={closeMenu}><span className='link'>About</span></Link></li>
+                    <li className='navlist'><Link href='works' onClick={closeMenu}><span className='link'>Works</span></Link></li>
+                    <li className='navlist'><Link href='article' onClick={closeMenu}><span className='link'>Article</span></Link></li>
+                    <li className='navlist'><Link href='contact' onClick={closeMenu}><span className='link'>Contact</span></Link></li>
                 </ul>
             </div>
         </nav>
