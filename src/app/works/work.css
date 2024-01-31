@@ -109,6 +109,9 @@
         background-color: rgba(0, 0, 0, 0.5); /* 例: 半透明の黒 */
         color: #fff;
         padding: 10px;
-        
+      
+    }
+    .work-img-container:hover .work-detail {
+        display: none; /* マウスオーバー時に表示 */
     }
 }
