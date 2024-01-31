@@ -1,0 +1,22 @@
+.workALL{
+    color: #fff;
+    margin: 120px 10%;
+}
+
+.workALL h1{
+    font-size: 4rem;
+    
+}
+
+.workALL .workTitle{
+    text-align: center;
+}
+
+.workALL img{
+    margin: 20px auto;
+}
+
+.workDetail{
+    margin-top: 50px;
+    font-size: 2rem;
+}
