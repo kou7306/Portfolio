@@ -13,22 +13,6 @@ body {
   
 }
 
-
-
-
-html{
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
-}
-@media screen and (max-width: 720px) {
-  html{
-    margin: 0;
-    padding: 0;
-    font-size: 8px;
-  }
-}
 .gradient-border {
   display: inline-block;
   width: 30%;
@@ -41,3 +25,34 @@ html{
   border-image-slice: 1; /* グラデーションの適用範囲を設定 */
 }
 
+
+
+
+html{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  html{
+    margin: 0;
+    padding: 0;
+    font-size: 8px;
+  }
+  .gradient-border {
+    display: inline-block;
+    width: 50%;
+    
+    font-size: 3rem;
+  
+    margin-bottom: 10px;
+    border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
+    border-image: linear-gradient(to right, #60a5ff, #ffffff); /* グラデーションの色を指定 */
+    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+  }
+  
+  
+
+
+}
