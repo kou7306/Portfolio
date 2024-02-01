@@ -104,6 +104,14 @@ export default async function Page() {
           <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" /></li>
         </ul> */}
       </div>
+      <div className='certification'>
+        <h2 className='gradient-border'>Certification</h2>
+        <ul>
+          <li>応用情報技術者</li>
+          <li>TOEIC 710点</li>
+        </ul>
+
+      </div>
 
       <MicroCMS/>
 
