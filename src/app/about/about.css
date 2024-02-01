@@ -74,10 +74,11 @@
 
 .skill-imgs{
   display: grid;
-  margin: 20px 20px;
+  margin: 50px 20px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 2つの列を均等に配置 */
   gap: 3%;
   grid-auto-rows: repeat(1fr); 
+  padding: 20px 0;
     
 }
 
@@ -85,7 +86,12 @@
 
 .skill-imgs img{
     background-color: #fff;
-    width: 100px;
+    width: 100%;
+    
+}
+
+.skill-con p{
+  width: 100%;
 }
 
 .affiliation h2{
@@ -199,15 +205,14 @@
   border-bottom: #fff 1px solid;
 }
 
-.
 
 .skill-imgs{
   
   display: grid;
-  margin: 20px 30px;
-  grid-template-columns: 1fr 1fr 1fr; /* 2つの列を均等に配置 */
-  gap: 6%;
-  grid-auto-rows: repeat(1fr); 
+  margin: 50px 30px 50px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr ; /* 2つの列を均等に配置 */
+  gap: 3%;
+  
 
 }
 
@@ -216,7 +221,7 @@
 
 .skill-imgs img{
     background-color: #fff;
-   
+    height: 60px;
 }
 
 .affiliation h2{
