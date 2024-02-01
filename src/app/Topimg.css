@@ -1,0 +1,40 @@
+
+.img-container{
+    margin: 0;
+    height: 80vh;
+    display: relative;
+    display: inline-block;
+    width: 100%;
+ 
+
+}
+
+
+
+
+.top-text{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+}
+
+.top-text h1{
+    font-size: 3.5rem;
+}
+
+.top-text p{
+    font-size: 2rem;
+}
+/* 
+@media screen and (max-width: 720px) {
+    .top-text h1{
+        font-size: 3rem;
+    }
+    .top-text p{
+        font-size: 1.5rem;
+    }
+} */

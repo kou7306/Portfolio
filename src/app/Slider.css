@@ -1,0 +1,36 @@
+.slide-wrapper .swiper-wrapper{
+    max-width: 100%;
+    transition-timing-function: linear;
+    align-items: center;
+    height: 30%;
+  }
+  
+  .slideImage {
+    aspect-ratio: 1/1;
+
+    width: 100%;
+  }
+
+  .swiper-slide {
+    width: auto;
+
+    overflow: hidden; 
+  }
+  
+
+  @media screen and (min-width: 768px) {
+
+    .slideImage {
+      aspect-ratio: initial;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .swiper-slide img {
+      display: block;
+  
+      height: 30%;
+  
+    }
+  }
+

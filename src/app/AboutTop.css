@@ -1,0 +1,74 @@
+
+.about-all::before {
+
+    /* content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    /* background: rgba(0, 0, 0, 0.3); 背景全体を半透明の黒にする */
+
+}
+
+.about-contents {
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 40%;
+}
+
+.about-title {
+    font-size: 6.5rem;
+    font-weight: bold;
+
+   
+}
+
+.about-detail {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+
+.about-button{
+    width: 60%;
+    height: 100%;
+    margin: 7% 30% 0 10%;
+}
+
+@media screen and (max-width: 720px) {
+    .about-all {
+        /* background-image: url("/images/img2.png"); */
+        /* color: white;
+        padding: 13px;
+        height: 100vh;
+        width: 100vw;   
+        background-repeat: no-repeat;
+        position: relative; 
+        background-size: cover;
+        object-fit: cover;
+     */   
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 水平方向に中央揃え */
+        text-align: center;
+        width: 100%;
+        padding: 13px;
+    
+    }
+    .about-contents {
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-right: 0%;
+    }
+
+    .about-button{
+        width: 60%;
+        height: 100%;
+        margin: 7% 20% 0 20%;
+        
+      
+    }
+    
+}

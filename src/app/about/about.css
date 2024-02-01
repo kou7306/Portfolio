@@ -1,0 +1,261 @@
+.about{
+    
+    margin-top: 180px;
+    color: #fff;
+}
+
+.prof-img{
+    margin: 50px auto 0;
+}
+
+.name{
+  margin: 20px 5% 0;
+  display: flex;
+  height: 70vh;
+  justify-content: space-around;
+}
+
+.name h1{
+    font-size: 6rem;
+    font-weight: bold;
+
+}
+
+.name p{
+  margin-left: 20px;
+}
+
+.name-contents{
+    font-size: 3rem;
+    
+    
+}
+
+.profile{
+  font-size: 1.5rem;
+  margin-top: 30px;
+  
+}
+
+.name-detail{
+  width: 50%;
+  margin-top: 40px;
+}
+
+
+
+
+.content-all{
+  
+  margin-top: 80px;
+}
+
+
+.affiliation{
+  margin-left: 8%;
+}
+.affiliation ul{
+  margin-left: 80px;
+  font-size: 2.5rem;
+  list-style: square;
+}
+
+.skill{
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+.skill h3{
+  font-size: 3rem;
+  width: 60%;
+  margin-bottom: 30px;
+  border-bottom: #fff 1px solid;
+}
+
+.skill-imgs{
+  display: grid;
+  margin: 20px 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* 2つの列を均等に配置 */
+  gap: 3%;
+  grid-auto-rows: repeat(1fr); 
+    
+}
+
+
+
+.skill-imgs img{
+    background-color: #fff;
+    width: 100px;
+}
+
+.affiliation h2{
+  margin: 60px 0 60px 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.skill h2{
+  margin: 120px 0 60px 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+.snsImg{
+  width: 50px;
+  height: auto;
+ margin-top: 30px;
+}
+
+.snsImg svg{
+  width: 50px;
+}
+
+.github{
+  background-color: #fff;
+}
+
+.gitlink{
+  width: 50px;
+  height: auto;
+}
+
+.snsLink{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin:40px 0 100px
+}
+
+
+@media screen and (max-width: 720px) {
+
+  .about{
+    
+    margin-top: 100px;
+    color: #fff;
+}
+
+.icon-img{
+    margin: 50px auto 0;
+    width: 80%;
+    
+}
+
+.name{
+  margin:0 10%;
+  display: block;
+  height: 70vh;
+  justify-content: space-around;
+}
+
+.name h1{
+    font-size: 5rem;
+    font-weight: bold;
+
+}
+
+.name p{
+  margin-left: 0px;
+}
+
+.name-contents{
+    font-size: 3rem;
+    
+    
+}
+
+.profile{
+  font-size: 1.5rem;
+  margin-top: 30px;
+  
+}
+
+.name-detail{
+  text-align: center;
+  width: 100%;
+  margin-top: 40px;
+}
+
+
+
+
+.content-all{
+  
+  margin-top: 80px;
+}
+
+
+.affiliation ul{
+  margin-left: 20px;
+  font-size: 2.5rem;
+  list-style: square;
+}
+
+.skill h3{
+  font-size: 3rem;
+  width: 60%;
+  margin-bottom: 30px;
+  border-bottom: #fff 1px solid;
+}
+
+.
+
+.skill-imgs{
+  
+  display: grid;
+  margin: 20px 30px;
+  grid-template-columns: 1fr 1fr 1fr; /* 2つの列を均等に配置 */
+  gap: 6%;
+  grid-auto-rows: repeat(1fr); 
+
+}
+
+
+
+
+.skill-imgs img{
+    background-color: #fff;
+   
+}
+
+.affiliation h2{
+  margin: 60px 0 60px 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.skill h2{
+  margin: 120px 0 60px 0;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+
+.snsImg{
+  width: 50px;
+  height: auto;
+ margin-top: 30px;
+}
+
+.snsImg svg{
+  width: 50px;
+}
+
+.github{
+  background-color: #fff;
+}
+
+.gitlink{
+  width: 50px;
+  height: auto;
+}
+
+.snsLink{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin:40px 0 100px
+}
+  
+}

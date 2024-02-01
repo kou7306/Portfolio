@@ -1,0 +1,117 @@
+.works {
+    
+    display: grid;
+    margin: 120px 60px;
+    grid-template-columns: repeat(2, 1fr); /* 2つの列を均等に配置 */
+    gap: 5%;
+    
+    color: #fff;
+    grid-auto-rows: repeat(1fr); 
+}
+
+@media screen and (max-width: 720px) {
+    .works {
+    
+        display: grid;
+        margin: 60px 60px;
+        grid-template-columns: 1fr;
+       
+        color: #fff;
+    
+    }
+}
+
+.work {
+    margin: 3% 5%;
+}
+
+
+.work-img-container {
+    position: relative;
+    width: 100%; 
+    height: 0; /* 最初は高さを0に設定 */
+    padding-top: 56.25%; 
+    margin: 0 auto;
+
+}
+
+.work-detail {
+    
+    position: absolute;
+    bottom: 0%; /* 下部に配置 */
+    left: 10%; /* 左端に配置 */
+    display: none;
+    
+    width: 50%;
+    
+     /* デフォルトでは非表示 */
+    /* 必要に応じて背景色、パディング、テキストのスタイルを追加 */
+    background-color: rgba(0, 0, 0, 0.5); /* 例: 半透明の黒 */
+    color: #fff;
+    padding: 20px;
+    
+}
+
+.work-title{
+    font-size: 2rem;
+    width: 100%;
+}
+.work-img-container:hover .work-detail {
+    display: block; /* マウスオーバー時に表示 */
+}
+
+.work-img {
+    transition: transform 0.3s ease-in-out;
+    width: 80%; /* 画像の幅を100%に設定 */
+    margin: 0 auto;
+}
+
+
+  
+.work-img:hover {
+    transform: scale(1.01); /* 画像を10%拡大 */
+}
+
+
+
+
+.work_page{
+    
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+}
+
+.work_title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 120px 0px;
+    color: #fff;
+}
+
+
+.co{
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    .work-detail {
+        text-align: center;
+        position: absolute;
+        bottom: 0%; /* 下部に配置 */
+        left: 0%; /* 左端に配置 */
+        display: none;
+        font-size: 1rem;
+        width: 100%;
+        
+         /* デフォルトでは非表示 */
+        /* 必要に応じて背景色、パディング、テキストのスタイルを追加 */
+        background-color: rgba(0, 0, 0, 0.5); /* 例: 半透明の黒 */
+        color: #fff;
+        padding: 10px;
+      
+    }
+    .work-img-container:hover .work-detail {
+        display: none; /* マウスオーバー時に表示 */
+    }
+}

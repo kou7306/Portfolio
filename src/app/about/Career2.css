@@ -1,0 +1,113 @@
+.careers{
+    margin-top: 5%;
+    margin-left: 8%;
+}
+.timeline{
+    position: relative;
+    max-width: 1200px;
+    margin: 100px auto;
+    color: #000;
+}
+
+.careerCon{
+    list-style: none;
+    padding: 10px 40px; 
+    position: relative;
+    width: 50%;
+    
+
+}
+
+
+.text-box{
+    padding: 20px 30px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 6px;
+    font-size: 1.4rem;
+    width: 100%;
+}
+
+.careers h2{
+    margin-left: 10%;
+    margin: 120px 0 60px 0;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.careerTopic{
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.text-box{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+
+.careerDetail{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.left-container{
+    left: 0;
+}
+
+.right-container{
+    left: 50%;
+}
+
+.careerCon img{
+    position: absolute;
+    width: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+}
+
+.right-container img{
+    left: -20px;
+}
+
+.timeline::after{
+    content:'';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background-color: #569fffbf;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+
+}
+
+@media screen and (max-width: 600px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+
+    .careerCon{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+
+
+    .right-container{
+        left: 0;
+    }
+
+    .left-container img, .right-container img{
+        left: 10px;
+    }
+}
+
