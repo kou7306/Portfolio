@@ -16,12 +16,12 @@ export default async function Page() {
 
   return (
   
-    <div className='work_page'>
+    <div className='work_pagE'>
       <div className='co'>
       <h1 className='work_title'>Works</h1>
       </div>
       
-      <ul className='works'>
+      <ul className='worksUL'>
       {datas.map((work) => (
         <li className='work frame' key={work.id} >
           <Link key={work.id} className='work-img-container' href={`/works/${work.id}`} >        
