@@ -26,6 +26,7 @@ export default async function WorkPage({
                 <h1>{data.work_name}</h1>        
             </div>
             <img src={data.work_imgs[0].url} alt={data.work_name} />
+            
             <div className='workDetail' style={{ whiteSpace: 'pre-line' }} dangerouslySetInnerHTML={{ __html: data.detail }} />
         </div>
     );
