@@ -28,6 +28,10 @@
     
 }
 
+.article-content{
+    margin-top: 50px;
+}
+
 .article-contents{
     width: 60vw;
     margin-left: 5%;
@@ -81,7 +85,10 @@
         margin-bottom: 200px;
         
     }
-    
+    .article-content{
+        margin-top: 30px;
+    }
+      
     .article-contents h2{
         border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
         border-image: linear-gradient(to right, #60a5ff, #ffffff);
