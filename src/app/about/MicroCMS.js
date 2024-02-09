@@ -4,6 +4,9 @@ import { client } from '../../../libs/client'
 
 export default async function MicroCMS () {
     const career = await client.get({ 
+      customRequestInit: {
+        cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+       },
       endpoint: 'career',
       queries: {
         limit: 100, // 取得するレコード数

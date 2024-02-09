@@ -5,7 +5,10 @@ import Link from 'next/link';
 
 
 export default async function Page() {
-  const works = await client.get({ 
+  const works = await client.get({
+    customRequestInit: {
+      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+     }, 
     endpoint: 'works',
     queries: {
       limit: 100, // 取得するレコード数

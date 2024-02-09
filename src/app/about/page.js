@@ -5,6 +5,9 @@ import { client } from '../../../libs/client'
 
 export default async function Page() {
   const skill = await client.get({ 
+    customRequestInit: {
+      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+     },
     endpoint: 'skill',
     queries: {
       limit: 100, // 取得するレコード数

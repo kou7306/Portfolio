@@ -1,11 +1,14 @@
-import { dividerClasses } from '@mui/material';
+
 import { client } from '../../libs/client'
 import React from 'react'
 import Slider from './Slider';
 
 
 export default async function Get_works () {
-    const works =     await client.get({ 
+    const works = await client.get({ 
+        customRequestInit: {
+            cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
+           },
         endpoint: 'works',
         queries: {
           limit: 100, // 取得するレコード数
