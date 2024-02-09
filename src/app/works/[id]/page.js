@@ -3,16 +3,13 @@ import React from 'react'
 import {client} from '../../../../libs/client';
 import "./workDetail.css";
 
-
+export const revalidate = 3600;
 export default async function WorkPage({
     params,
   }) {
     const workId = params.id;
 
     const work = await client.get({
-        customRequestInit: {
-            cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-           },
         endpoint: 'works', // MicroCMSのコンテンツタイプ名に置き換えてください
         queries: {
             limit: 100, // 取得するレコード数

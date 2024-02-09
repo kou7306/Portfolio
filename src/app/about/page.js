@@ -3,11 +3,10 @@ import './about.css'
 import MicroCMS from './MicroCMS'
 import { client } from '../../../libs/client'
 
+export const revalidate = 3600;
+
 export default async function Page() {
   const skill = await client.get({ 
-    customRequestInit: {
-      cache: "no-store", // キャッシュを利用せずに常に新しいデータを取得する
-     },
     endpoint: 'skill',
     queries: {
       limit: 100, // 取得するレコード数
