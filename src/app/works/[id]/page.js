@@ -3,7 +3,7 @@ import React from 'react'
 import {client} from '../../../../libs/client';
 import "./workDetail.css";
 
-
+export const revalidate = 3600;
 export default async function WorkPage({
     params,
   }) {

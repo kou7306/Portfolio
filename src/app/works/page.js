@@ -3,9 +3,9 @@ import './work.css'
 import { client } from '../../../libs/client'
 import Link from 'next/link';
 
-
+export const revalidate = 3600;
 export default async function Page() {
-  const works = await client.get({ 
+  const works = await client.get({
     endpoint: 'works',
     queries: {
       limit: 100, // 取得するレコード数

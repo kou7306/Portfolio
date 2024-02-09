@@ -1,11 +1,11 @@
-import { dividerClasses } from '@mui/material';
+
 import { client } from '../../libs/client'
 import React from 'react'
 import Slider from './Slider';
 
-
+export const revalidate = 3600;
 export default async function Get_works () {
-    const works =     await client.get({ 
+    const works = await client.get({ 
         endpoint: 'works',
         queries: {
           limit: 100, // 取得するレコード数

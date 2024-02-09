@@ -3,6 +3,8 @@ import './about.css'
 import MicroCMS from './MicroCMS'
 import { client } from '../../../libs/client'
 
+export const revalidate = 3600;
+
 export default async function Page() {
   const skill = await client.get({ 
     endpoint: 'skill',

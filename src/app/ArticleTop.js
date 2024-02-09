@@ -9,6 +9,7 @@ const accessToken = process.env.QIITA_ACCESSTOKEN;
 
 async function getData() {
   const res = await fetch('https://qiita.com/api/v2/authenticated_user/items', {
+    revalidate: 3600,
     headers: {
       Authorization: `Bearer ${accessToken}`,
     },
