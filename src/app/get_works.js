@@ -1,34 +1,37 @@
-import { dividerClasses } from '@mui/material';
-import { client } from '../../libs/client'
-import React from 'react'
+"use client";
+import React, { useState, useEffect } from 'react';
 import Slider from './Slider';
+import { client } from '../../libs/client';
 
+function GetWorks() {
+    const [dataSets, setDataSets] = useState([]);
 
-export default async function Get_works () {
-    const works =     await client.get({ 
-        endpoint: 'works',
-        queries: {
-          limit: 100, // 取得するレコード数
-          offset: 0, // オフセット値
-        },
-       });
-    const datas = works.contents;
-    const dataSets = []; // IDと画像URLのセットを格納する配列
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const works = await client.get({
+                    endpoint: 'works',
+                    queries: {
+                        limit: 100,
+                        offset: 0,
+                    },
+                });
+                const datas = works.contents;
+                const sets = datas.map(work => ({
+                    id: work.id,
+                    imageUrl: work.work_imgs[0].url,
+                }));
+                setDataSets(sets);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
 
-    datas.forEach((work) => {
-        const dataSet = {
-            id: work.id,
-            imageUrl: work.work_imgs[0].url
-        };
-        dataSets.push(dataSet);
-    });
+        fetchData(); // コンポーネントがマウントされた後にデータを取得する
 
-    // const images=["https://placehold.jp/150x150.png"]
+    }); // 第二引数の空配列はマウント時のみ実行されることを意味する
 
-    return (
-        <Slider datas={dataSets}/>
-    )
+    return <Slider datas={dataSets} />;
 }
 
-
-
+export default GetWorks;

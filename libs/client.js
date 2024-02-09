@@ -5,7 +5,7 @@ import { createClient } from 'microcms-js-sdk';
 // dotenv.config();
 
 // アプリケーションコード
-const apiKey = process.env.microCMS_APIKEY;
+const apiKey = process.env.NEXT_PUBLIC_microCMS_APIKEY;
 // const keys = require('../key.json');
 // const apiKey = keys.microCMS_APIKEY;
 export const client = createClient({
