@@ -63,6 +63,7 @@ function Header() {
                     <li className='navlist'><Link href='/works' onClick={closeMenu}><span className='link'>Works</span></Link></li>
                     <li className='navlist'><Link href='/article' onClick={closeMenu}><span className='link'>Article</span></Link></li>
                     <li className='navlist'><Link href='/contact' onClick={closeMenu}><span className='link'>Contact</span></Link></li>
+                    
                 </ul>
             </div>
         </nav>
