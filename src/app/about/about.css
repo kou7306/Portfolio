@@ -4,6 +4,24 @@
     color: #fff;
 }
 
+.name-img{
+  position: relative;
+}
+
+.qrLink{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  transform: translate(-50%, -50%);
+  height: auto;
+  z-index: 100;
+  color: transparent;
+  background-color: transparent; /* リンクの背景を透明にする */
+  border: none; /* ボーダーを非表示にする */
+  cursor: pointer; /* マウスカーソルをポインターにする */
+}
+
 .prof-img{
     margin: 50px auto 0;
 }
