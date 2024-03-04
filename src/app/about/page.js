@@ -2,6 +2,7 @@ import React from 'react'
 import './about.css'
 import MicroCMS from './MicroCMS'
 import { client } from '../../../libs/client'
+import Link from 'next/link';
 
 export const revalidate = 3600;
 
@@ -22,6 +23,7 @@ export default async function Page() {
       <div className='name'>
         <div className='name-img'>
           <img src='/images/icon.png' alt='icon' className='icon-img'/>
+          <Link href='/qr' className='qrLink'>QR</Link>
         </div>
         <div className='name-detail'>
           <h1>Kota Yahagi</h1>

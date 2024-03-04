@@ -11,7 +11,7 @@ const Career2 = ({datas}) => {
         
         {datas.map((data, index) => (
           <li className={`careerCon ${index % 2 === 0 ? 'left-container' : 'right-container'}`}>
-            <Link href='/qr'><img src="/images/pin.png"/></Link>
+            <img src="/images/pin.png"/>
             <div className='text-box'>
             <h1 className='careerTopic'>{data.title}</h1>
             <small>{data.date}</small>
