@@ -1,0 +1,19 @@
+.qr_page{
+    margin-top: 200px;
+}
+
+.qrInfo{
+    text-align: center;
+    margin-bottom: 50vh;
+}
+
+.qrTitle {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.qrInfo img{
+    margin: 0 auto;
+    width: 70%;
+}
