@@ -9,4 +9,5 @@
   width: 100px; /* 幅を100pxに設定 */
   height: 100px; /* 高さを100pxに設定 */
   border-width: 8px; /* ボーダーの幅を大きく */
+  border-color: var(--primary-color); /* 背景色をプライマリカラーに設定 */
 }
