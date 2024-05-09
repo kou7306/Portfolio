@@ -2,40 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #800080; /* プライマリカラーを定義 */
+  --secondary-color: #4b0082; /* セカンダリカラーを定義 */
+  --tertiary-color: #701c71; /* サードカラーを定義 */
+  --quaternary-color: #3d0569; /* クォータナリカラーを定義 */
+}
+
 body {
-  
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   background-color: #0f0f0f;
   margin: 0;
   display: relative;
-  
 }
 
 .gradient-border {
   display: inline-block;
   width: 30%;
-  
+
   font-size: 3rem;
 
   margin-bottom: 10px;
   border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
-  border-image: linear-gradient(to right, #60a5ff, #ffffff); /* グラデーションの色を指定 */
+  border-image: linear-gradient(
+    to right,
+    var(--primary-color),
+    #ffffff
+  ); /* グラデーションの色を指定 */
   border-image-slice: 1; /* グラデーションの適用範囲を設定 */
 }
 
-
-
-
-html{
+html {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", sans-serif;
 }
 @media screen and (max-width: 768px) {
-  html{
+  html {
     margin: 0;
     padding: 0;
     font-size: 8px;
@@ -43,16 +49,11 @@ html{
   .gradient-border {
     display: inline-block;
     width: 60%;
-    
+
     font-size: 3rem;
-  
+
     margin-bottom: 10px;
     border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
-    border-image: linear-gradient(to right, #60a5ff, #ffffff); /* グラデーションの色を指定 */
     border-image-slice: 1; /* グラデーションの適用範囲を設定 */
   }
-  
-  
-
-
 }
