@@ -8,7 +8,7 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kota Portfolio Site",
+  title: "Kota Portfolio Site(矢作恒太のポートフォリオサイトです。)",
   description: "矢作恒太のポートフォリオサイトです。",
   keywords: ["矢作恒太", "ポートフォリオ", "Kota YAHAGI"],
 };
@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords.join(", ")} />
+        <link rel="icon" href="/images/logo2.png" />
       </Head>
       <body className={inter.className}>
         <ThreeBackground />
