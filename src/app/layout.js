@@ -3,6 +3,7 @@ import "./globals.css";
 import ThreeBackground from "./ThreeBackground";
 import Header from "./mobileHeader";
 import { Analytics } from "@vercel/analytics/react";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,6 +16,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="-e46btwtV4l9x7zR5AB3KFKJhvTXkEzo0fWQkYMTLSc"
+        />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(", ")} />
+      </Head>
       <body className={inter.className}>
         <ThreeBackground />
         <Header />
