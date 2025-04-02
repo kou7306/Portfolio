@@ -8,7 +8,7 @@ import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Kota Portfolio Site[矢作恒太のポートフォリオサイト]",
+  title: "Kota Portfolio Site [矢作恒太のポートフォリオサイト]",
   description: "矢作恒太のポートフォリオサイトです。",
   keywords: ["矢作恒太", "ポートフォリオ", "Kota YAHAGI"],
 };
