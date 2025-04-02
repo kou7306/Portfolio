@@ -31,7 +31,7 @@ export default async function Page() {
             <h1>Kota Yahagi</h1>
             <p className="name-contents">矢作恒太</p>
             <p className="profile">
-              今大学４年でロボットとAIに関連する研究をしています。チーム開発が大好きです。趣味はアニメとサッカー観戦などです。院進予定27卒
+              修士１年でロボットとAIに関連する研究をしています。チーム開発が大好きです。趣味はアニメとサッカー観戦などです。27卒
             </p>
             <div className="snsLink">
               <a href="https://twitter.com/amatuzi7306" className="snsImg">
