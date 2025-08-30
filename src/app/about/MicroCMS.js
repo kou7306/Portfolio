@@ -13,6 +13,7 @@ export default async function MicroCMS () {
       },
      });
     const datas = career.contents;
+   datas.sort((a, b) => a.index - b.index);
 
 
   return <Career2 datas={datas} />
