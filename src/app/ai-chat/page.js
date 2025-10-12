@@ -209,6 +209,17 @@ export default function AIChatPage() {
           </button>
         </div>
       </div>
+
+      {/* クレジット表記 */}
+      <div className="chat-credit">
+        <a
+          href="https://min-chi.material.jp/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          © みんちりえ
+        </a>
+      </div>
     </div>
   );
 }
