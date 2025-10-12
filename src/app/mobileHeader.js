@@ -81,16 +81,21 @@ function Header() {
                   <span className="link">Article</span>
                 </Link>
               </li>
-              <li className="navlist">
+               <li className="navlist">
                 <Link href="/contact" onClick={closeMenu}>
                   <span className="link">Contact</span>
                 </Link>
               </li>
-              <li className="navlist ai-chat-btn-mobile">
-                <Link href="/ai-chat" onClick={closeMenu}>
-                  <span className="link">AI-Chat</span>
-                </Link>
-              </li>
+               <li className="navlist github-persona-btn-mobile">
+                 <Link href="/github-persona" onClick={closeMenu}>
+                   <span className="link">GitHub診断</span>
+                 </Link>
+               </li>
+               <li className="navlist ai-chat-btn-mobile">
+                 <Link href="/ai-chat" onClick={closeMenu}>
+                   <span className="link">AI-Kotaに聞く</span>
+                 </Link>
+               </li>
             </ul>
           </div>
         </nav>
@@ -140,17 +145,23 @@ function Header() {
               </Link>
             </li>
 
-            <li>
-              <Link href="/contact">
-                <span className="link">Contact</span>
-              </Link>
-            </li>
+             <li>
+               <Link href="/contact">
+                 <span className="link">Contact</span>
+               </Link>
+             </li>
 
-            <li className="ai-chat-btn">
-              <Link href="/ai-chat">
-                <span className="link">AI-Chat</span>
-              </Link>
-            </li>
+             <li className="github-persona-btn">
+               <Link href="/github-persona">
+                 <span className="link">GitHub診断</span>
+               </Link>
+             </li>
+
+             <li className="ai-chat-btn">
+               <Link href="/ai-chat">
+                 <span className="link">AI-Kotaに聞く</span>
+               </Link>
+             </li>
           </ul>
         </nav>
       </div>

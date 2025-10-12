@@ -11,7 +11,8 @@ export default function AIChatPage() {
   const [messages, setMessages] = useState([
     {
       role: "ai",
-      content: "こんにちは！何でも聞いてください。",
+      content:
+        "こんにちは！AI-Kotaです。僕についてのことならなんでも聞いてね。",
       name: "AI Clone",
     },
   ]);
@@ -155,7 +156,7 @@ export default function AIChatPage() {
           {messages.map((msg, index) => (
             <div key={index} className={`message-item ${msg.role}`}>
               <div className="message-sender">
-                {msg.role === "ai" ? "Kota-AI" : "あなた"}
+                {msg.role === "ai" ? "AI-Kota" : "あなた"}
               </div>
               <div className="message-text">
                 {msg.content || (
@@ -177,7 +178,7 @@ export default function AIChatPage() {
         {messages.slice(-3).map((msg, index) => (
           <div key={index} className={`message-preview ${msg.role}`}>
             <div className="preview-sender">
-              {msg.role === "ai" ? "Kota-AI" : "あなた"}
+              {msg.role === "ai" ? "AI-Kota" : "あなた"}
             </div>
             <div className="message-preview-content">
               <div className="preview-text">{msg.content || "..."}</div>
@@ -194,7 +195,7 @@ export default function AIChatPage() {
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Message the Kota-AI..."
+            placeholder="AI-Kotaに質問する..."
             disabled={isLoading}
             maxLength={500}
             className="chat-input"

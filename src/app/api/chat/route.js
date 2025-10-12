@@ -5,9 +5,8 @@
 
 import { NextResponse } from "next/server";
 
-const DIFY_API_URL =
-  process.env.NEXT_PUBLIC_DIFY_API_URL || "https://api.dify.ai";
-const DIFY_API_KEY = process.env.NEXT_PUBLIC_DIFY_API_KEY;
+const DIFY_API_URL = process.env.DIFY_API_URL || "https://api.dify.ai";
+const DIFY_API_KEY = process.env.DIFY_API_KEY;
 
 export async function POST(request) {
   try {
