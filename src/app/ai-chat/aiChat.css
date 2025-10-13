@@ -15,6 +15,25 @@
     "Helvetica Neue", Arial, sans-serif;
 }
 
+/* モバイルでのスクロール防止 */
+@media (max-width: 768px) {
+  .ai-chat-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh; /* 動的ビューポート高さ（モバイルブラウザのUIを除く） */
+    overflow: hidden;
+    touch-action: none; /* 全てのタッチ操作を無効化 */
+  }
+
+  /* メッセージオーバーレイ内だけスクロール可能 */
+  .messages-overlay {
+    touch-action: auto;
+  }
+}
+
 /* キャラクター背景エリア */
 .character-background {
   position: absolute;

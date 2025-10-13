@@ -32,6 +32,34 @@ export default function AIChatPage() {
     scrollToBottom();
   }, [messages]);
 
+  // モバイルでbodyのスクロールを無効化
+  useEffect(() => {
+    // モバイル判定
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+      // 元のbodyスタイルを保存
+      const originalOverflow = document.body.style.overflow;
+      const originalPosition = document.body.style.position;
+      const originalWidth = document.body.style.width;
+      const originalHeight = document.body.style.height;
+
+      // スクロールを無効化
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+      document.body.style.height = "100%";
+
+      // クリーンアップ（ページを離れるときに復元）
+      return () => {
+        document.body.style.overflow = originalOverflow;
+        document.body.style.position = originalPosition;
+        document.body.style.width = originalWidth;
+        document.body.style.height = originalHeight;
+      };
+    }
+  }, []);
+
   // メッセージ送信処理
   const handleSend = async () => {
     if (!inputText.trim() || isLoading) return;
