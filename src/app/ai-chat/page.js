@@ -58,7 +58,17 @@ export default function AIChatPage() {
       });
 
       if (!response.ok) {
-        throw new Error(`API Error: ${response.status}`);
+        // エラーレスポンスを取得
+        const errorData = await response.json().catch(() => ({}));
+
+        // クレジット切れの特別なエラーハンドリング
+        if (errorData.isCreditsIssue) {
+          throw new Error(
+            errorData.error || "AI応答サービスでエラーが発生しました。"
+          );
+        }
+
+        throw new Error(errorData.error || `API Error: ${response.status}`);
       }
 
       // ストリーミングレスポンスを処理
@@ -88,12 +98,25 @@ export default function AIChatPage() {
     } catch (error) {
       console.error("Error:", error);
       setIsSpeaking(false); // エラー時も口パク停止
+
+      // エラーメッセージの判定
+      let errorMessage =
+        "申し訳ありません。エラーが発生しました。もう一度お試しください。";
+
+      if (
+        error.message.includes("クレジットが不足") ||
+        error.message.includes("API認証エラー")
+      ) {
+        errorMessage = `⚠️ ${error.message}\n\nこのAIチャットは現在利用できません。お手数ですが、他の方法でお問い合わせください。`;
+      } else if (error.message.includes("API Error")) {
+        errorMessage = error.message;
+      }
+
       setMessages((prev) => {
         const newMessages = [...prev];
         newMessages[newMessages.length - 1] = {
           role: "ai",
-          content:
-            "申し訳ありません。エラーが発生しました。もう一度お試しください。",
+          content: errorMessage,
         };
         return newMessages;
       });

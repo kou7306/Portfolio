@@ -23,42 +23,78 @@ export default function GitHubPersona() {
     setError(null);
     setImageUrl(null);
 
-    try {
-      // Next.jsのAPI Routeを経由してCORS問題を回避
-      const fullUrl = `/api/github-persona?username=${username}`;
+    // リトライロジック（最大2回まで自動再試行）
+    const maxRetries = 2;
+    let currentAttempt = 0;
 
-      console.log("APIリクエスト:", fullUrl);
+    const attemptFetch = async () => {
+      try {
+        currentAttempt++;
+        console.log(`試行 ${currentAttempt}/${maxRetries + 1}`);
 
-      const response = await fetch(fullUrl, {
-        method: "GET",
-        headers: {
-          Accept: "image/png",
-        },
-      });
+        // Next.jsのAPI Routeを経由してCORS問題を回避
+        const fullUrl = `/api/github-persona?username=${username}`;
 
-      console.log("APIレスポンス:", response.status);
+        console.log("APIリクエスト:", fullUrl);
 
-      if (!response.ok) {
-        if (response.status === 429) {
+        const response = await fetch(fullUrl, {
+          method: "GET",
+          headers: {
+            Accept: "image/png",
+          },
+        });
+
+        console.log("APIレスポンス:", response.status);
+
+        if (!response.ok) {
+          if (response.status === 429) {
+            throw new Error(
+              "リクエストが多すぎます。少し時間をおいてから再度お試しください。（約1分後）"
+            );
+          }
+          if (response.status === 504 && currentAttempt <= maxRetries) {
+            // 504エラーで、まだリトライ可能な場合は自動再試行
+            console.log("504エラー - 3秒後に自動再試行します...");
+            await new Promise((resolve) => setTimeout(resolve, 3000)); // 3秒待機
+            return attemptFetch(); // 再試行
+          }
+          if (response.status === 504) {
+            throw new Error(
+              "画像生成に時間がかかっています。しばらく待ってから再度お試しください。"
+            );
+          }
+          const errorData = await response.json().catch(() => ({}));
           throw new Error(
-            "リクエストが多すぎます。少し時間をおいてから再度お試しください。（約1分後）"
+            errorData.error ||
+              "ユーザーが見つからないか、画像生成に失敗しました"
           );
         }
-        if (response.status === 504) {
-          throw new Error(
-            "画像生成に時間がかかっています。もう一度お試しください。（2回目以降は通常速くなります）"
-          );
+
+        // 画像をBlobとして取得
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        setImageUrl(url);
+        console.log("✅ 画像生成成功！");
+      } catch (err) {
+        // 429エラーまたは最終試行の場合はエラーを投げる
+        if (
+          err.message.includes("リクエストが多すぎます") ||
+          currentAttempt > maxRetries
+        ) {
+          throw err;
         }
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(
-          errorData.error || "ユーザーが見つからないか、画像生成に失敗しました"
-        );
+        // それ以外のエラーで、まだリトライ可能な場合は再試行
+        if (currentAttempt <= maxRetries) {
+          console.log("エラー発生 - 3秒後に再試行します...");
+          await new Promise((resolve) => setTimeout(resolve, 3000));
+          return attemptFetch();
+        }
+        throw err;
       }
+    };
 
-      // 画像をBlobとして取得
-      const blob = await response.blob();
-      const url = URL.createObjectURL(blob);
-      setImageUrl(url);
+    try {
+      await attemptFetch();
     } catch (err) {
       console.error("Error:", err);
       setError(err.message || "エラーが発生しました");

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
-// Vercelのタイムアウトを延長（最大300秒 = 5分）
-export const maxDuration = 300;
+// Vercelのタイムアウトを最大値に設定（hobby planは最大60秒）
+export const maxDuration = 60;
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);

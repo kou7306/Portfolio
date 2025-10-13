@@ -45,11 +45,57 @@ export async function POST(request) {
 
     if (!response.ok) {
       const errorText = await response.text();
-      console.error("❌ Dify API エラー:", response.status, errorText);
+      console.error("❌ Dify API エラー詳細:");
+      console.error("  ステータスコード:", response.status);
+      console.error("  エラーテキスト:", errorText);
+      console.error(
+        "  レスポンスヘッダー:",
+        Object.fromEntries(response.headers.entries())
+      );
+
+      // JSONパース試行
+      let errorJson;
+      try {
+        errorJson = JSON.parse(errorText);
+        console.error("  エラーJSON:", errorJson);
+      } catch (e) {
+        console.error("  エラーはJSON形式ではありません");
+      }
+
+      // クレジット切れやアカウント関連のエラーを検出
+      let errorMessage = `Dify API Error: ${response.status}`;
+      let isCreditsIssue = false;
+
+      // 一般的なクレジット/認証エラーのパターンをチェック
+      const errorTextLower = errorText.toLowerCase();
+      if (
+        response.status === 402 ||
+        response.status === 403 ||
+        response.status === 429 ||
+        errorTextLower.includes("insufficient_quota") ||
+        errorTextLower.includes("credits") ||
+        errorTextLower.includes("quota") ||
+        errorTextLower.includes("limit exceeded") ||
+        errorTextLower.includes("rate limit") ||
+        (errorJson &&
+          (errorJson.code === "insufficient_quota" ||
+            errorJson.code === "rate_limit_exceeded"))
+      ) {
+        errorMessage =
+          "⚠️ AI応答サービスのクレジットまたはレート制限に達しました。\n\n管理者に連絡するか、しばらく時間をおいてからお試しください。";
+        isCreditsIssue = true;
+      } else if (response.status === 401) {
+        errorMessage =
+          "⚠️ API認証エラーが発生しました。\n\n管理者に連絡してください。";
+        isCreditsIssue = true;
+      }
+
       return NextResponse.json(
         {
-          error: `Dify API Error: ${response.status}`,
+          error: errorMessage,
           details: errorText,
+          statusCode: response.status,
+          isCreditsIssue: isCreditsIssue,
         },
         { status: response.status }
       );
