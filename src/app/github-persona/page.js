@@ -44,6 +44,11 @@ export default function GitHubPersona() {
             "リクエストが多すぎます。少し時間をおいてから再度お試しください。（約1分後）"
           );
         }
+        if (response.status === 504) {
+          throw new Error(
+            "画像生成に時間がかかっています。もう一度お試しください。（2回目以降は通常速くなります）"
+          );
+        }
         const errorData = await response.json().catch(() => ({}));
         throw new Error(
           errorData.error || "ユーザーが見つからないか、画像生成に失敗しました"
