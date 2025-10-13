@@ -28,15 +28,30 @@ export default function VRoidViewer({
 
     let handleResize; // リサイズハンドラー
     let resizeTimers = []; // リサイズタイマーを保存
+    let isInitialized = false; // 初期化済みフラグ
 
     // canvasのサイズが確定するまで少し待機
     const initializeScene = () => {
-      if (!canvasRef.current) return;
+      if (!canvasRef.current || isInitialized) return;
 
-      // canvasのサイズを取得（0の場合はデフォルト値を使用）
-      const width = canvasRef.current.clientWidth || window.innerWidth;
-      const height = canvasRef.current.clientHeight || window.innerHeight;
+      // canvasの親要素のサイズを取得
+      const parentElement = canvasRef.current.parentElement;
+      const width =
+        parentElement?.clientWidth ||
+        canvasRef.current.clientWidth ||
+        window.innerWidth;
+      const height =
+        parentElement?.clientHeight ||
+        canvasRef.current.clientHeight ||
+        window.innerHeight;
 
+      // サイズが有効でない場合は初期化を延期
+      if (width === 0 || height === 0) {
+        console.log("Canvas サイズが0です。初期化を延期します...");
+        return;
+      }
+
+      isInitialized = true;
       console.log("Canvas初期化サイズ:", width, height);
 
       // シーン、カメラ、レンダラーの初期化
@@ -208,15 +223,22 @@ export default function VRoidViewer({
     // 少し遅延させて初期化（DOMが確実にレンダリングされるのを待つ）
     // モバイルの場合はさらに長く待機
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-    const delay = isMobile ? 200 : 50;
 
-    const initTimer = setTimeout(() => {
-      initializeScene();
-    }, delay);
+    // 複数回試行して、サイズが確定したタイミングで初期化
+    const initTimers = [];
+    const delays = isMobile ? [100, 300, 500, 800] : [50, 200];
+
+    delays.forEach((delay) => {
+      const timer = setTimeout(() => {
+        initializeScene();
+      }, delay);
+      initTimers.push(timer);
+    });
 
     // クリーンアップ
     return () => {
-      clearTimeout(initTimer);
+      // 初期化タイマーをクリア
+      initTimers.forEach((timer) => clearTimeout(timer));
 
       // リサイズタイマーをクリア
       resizeTimers.forEach((timer) => clearTimeout(timer));
