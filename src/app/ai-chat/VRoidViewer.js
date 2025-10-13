@@ -22,37 +22,35 @@ export default function VRoidViewer({
   const rendererRef = useRef(null);
   const animationFrameRef = useRef(null);
   const clockRef = useRef(new THREE.Clock());
+  const resizeObserverRef = useRef(null);
 
   useEffect(() => {
     if (!canvasRef.current) return;
 
     let handleResize; // リサイズハンドラー
     let resizeTimers = []; // リサイズタイマーを保存
-    let isInitialized = false; // 初期化済みフラグ
 
     // canvasのサイズが確定するまで少し待機
     const initializeScene = () => {
-      if (!canvasRef.current || isInitialized) return;
+      if (!canvasRef.current) return;
 
-      // canvasの親要素のサイズを取得
-      const parentElement = canvasRef.current.parentElement;
+      // parentElementのサイズを基準にする（より確実）
+      const parent = canvasRef.current.parentElement;
       const width =
-        parentElement?.clientWidth ||
+        parent?.clientWidth ||
         canvasRef.current.clientWidth ||
         window.innerWidth;
       const height =
-        parentElement?.clientHeight ||
+        parent?.clientHeight ||
         canvasRef.current.clientHeight ||
         window.innerHeight;
 
-      // サイズが有効でない場合は初期化を延期
-      if (width === 0 || height === 0) {
-        console.log("Canvas サイズが0です。初期化を延期します...");
-        return;
-      }
-
-      isInitialized = true;
       console.log("Canvas初期化サイズ:", width, height);
+      console.log(
+        "Parent要素サイズ:",
+        parent?.clientWidth,
+        parent?.clientHeight
+      );
 
       // シーン、カメラ、レンダラーの初期化
       const scene = new THREE.Scene();
@@ -200,8 +198,22 @@ export default function VRoidViewer({
         if (!canvasRef.current || !cameraRef.current || !rendererRef.current)
           return;
 
-        const width = canvasRef.current.clientWidth || window.innerWidth;
-        const height = canvasRef.current.clientHeight || window.innerHeight;
+        // parentElementのサイズを基準にする
+        const parent = canvasRef.current.parentElement;
+        const width =
+          parent?.clientWidth ||
+          canvasRef.current.clientWidth ||
+          window.innerWidth;
+        const height =
+          parent?.clientHeight ||
+          canvasRef.current.clientHeight ||
+          window.innerHeight;
+
+        // サイズが不正確な場合はスキップ
+        if (width === 0 || height === 0) {
+          console.log("サイズが0のためスキップ");
+          return;
+        }
 
         console.log("リサイズ:", width, height);
 
@@ -212,36 +224,46 @@ export default function VRoidViewer({
         rendererRef.current.setPixelRatio(window.devicePixelRatio);
       };
 
+      // ResizeObserverでcanvasのサイズ変更を監視（より確実）
+      if (
+        typeof ResizeObserver !== "undefined" &&
+        canvasRef.current.parentElement
+      ) {
+        resizeObserverRef.current = new ResizeObserver(() => {
+          handleResize();
+        });
+        resizeObserverRef.current.observe(canvasRef.current.parentElement);
+      }
+
       window.addEventListener("resize", handleResize);
 
       // 初回リサイズハンドラーを複数回呼び出して確実にサイズを設定
       resizeTimers.push(setTimeout(() => handleResize(), 100));
       resizeTimers.push(setTimeout(() => handleResize(), 300));
       resizeTimers.push(setTimeout(() => handleResize(), 500));
+      resizeTimers.push(setTimeout(() => handleResize(), 1000)); // モバイル用に1秒後も追加
     };
 
     // 少し遅延させて初期化（DOMが確実にレンダリングされるのを待つ）
     // モバイルの場合はさらに長く待機
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const delay = isMobile ? 200 : 50;
 
-    // 複数回試行して、サイズが確定したタイミングで初期化
-    const initTimers = [];
-    const delays = isMobile ? [100, 300, 500, 800] : [50, 200];
-
-    delays.forEach((delay) => {
-      const timer = setTimeout(() => {
-        initializeScene();
-      }, delay);
-      initTimers.push(timer);
-    });
+    const initTimer = setTimeout(() => {
+      initializeScene();
+    }, delay);
 
     // クリーンアップ
     return () => {
-      // 初期化タイマーをクリア
-      initTimers.forEach((timer) => clearTimeout(timer));
+      clearTimeout(initTimer);
 
       // リサイズタイマーをクリア
       resizeTimers.forEach((timer) => clearTimeout(timer));
+
+      // ResizeObserverを削除
+      if (resizeObserverRef.current) {
+        resizeObserverRef.current.disconnect();
+      }
 
       // リサイズイベントリスナーを削除
       if (handleResize) {
