@@ -44,12 +44,12 @@
 }
 
 .profile-image {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 4px solid var(--primary-color, #800080);
+  border: 5px solid var(--primary-color, #800080);
   box-shadow: 0 8px 24px rgba(128, 0, 128, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -66,7 +66,7 @@
 }
 
 .profile-name {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0 0 0.5rem 0;
@@ -74,17 +74,18 @@
 }
 
 .profile-title {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #b19cd9;
   margin: 0 0 1rem 0;
 }
 
 .profile-bio {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.15rem;
+  line-height: 1.7;
   color: #999;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 500px;
+  white-space: pre-line;
 }
 
 /* リンクリスト */
@@ -249,33 +250,200 @@
 /* レスポンシブデザイン */
 @media screen and (max-width: 768px) {
   .links-page {
-    padding: 1rem 0.5rem;
+    padding: 1rem 0.75rem;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .links-container {
-    padding: 1rem;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    animation: none;
+  }
+
+  .profile-section {
+    margin-bottom: 1.75rem;
+    animation: none;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border: 5px solid var(--primary-color, #800080);
+  }
+
+  .profile-name {
+    font-size: 2.5rem;
+    margin: 0 0 0.4rem 0;
+  }
+
+  .profile-title {
+    font-size: 1.35rem;
+    margin: 0 0 0.8rem 0;
+  }
+
+  .profile-bio {
+    font-size: 1.25rem;
+    max-width: 100%;
+    line-height: 1.65;
+    padding: 0 0.5rem;
+  }
+
+  .links-list {
+    gap: 1rem;
+  }
+
+  .link-card {
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+    animation: none;
+    border: 3px solid rgba(128, 0, 128, 0.4);
+  }
+
+  .link-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(128, 0, 128, 0.3);
+  }
+
+  .link-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .link-description {
+    display: none;
+  }
+
+  .link-arrow {
+    font-size: 1.8rem;
+  }
+
+  .links-footer {
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+  }
+
+  .links-footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .links-page {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .links-container {
+    padding: 0;
+  }
+
+  .profile-section {
+    margin-bottom: 1.5rem;
   }
 
   .profile-image {
     width: 100px;
     height: 100px;
+    margin-bottom: 0.75rem;
   }
 
   .profile-name {
-    font-size: 1.75rem;
+    font-size: 2.2rem;
+    margin: 0 0 0.3rem 0;
   }
 
   .profile-title {
-    font-size: 1rem;
+    font-size: 1.25rem;
+    margin: 0 0 0.7rem 0;
   }
 
   .profile-bio {
-    font-size: 0.9rem;
-    max-width: 90%;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 0.25rem;
+  }
+
+  .links-list {
+    gap: 0.85rem;
   }
 
   .link-card {
-    padding: 1rem 1.25rem;
+    padding: 1.1rem 1.25rem;
+    animation: none;
+    border: 2.5px solid rgba(128, 0, 128, 0.4);
+  }
+
+  .link-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(128, 0, 128, 0.3);
+  }
+
+  .link-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .link-description {
+    display: none;
+  }
+
+  .link-arrow {
+    font-size: 1.6rem;
+  }
+
+  .links-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .links-footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* 超小型スマホ用（iPhone SE等） */
+@media screen and (max-width: 375px) {
+  .links-page {
+    padding: 0.5rem 0.4rem;
+  }
+
+  .profile-section {
+    margin-bottom: 1.25rem;
+  }
+
+  .profile-image {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 0.6rem;
+  }
+
+  .profile-name {
+    font-size: 2rem;
+    margin: 0 0 0.25rem 0;
+  }
+
+  .profile-title {
+    font-size: 1.15rem;
+    margin: 0 0 0.6rem 0;
+  }
+
+  .profile-bio {
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+
+  .links-list {
+    gap: 0.75rem;
+  }
+
+  .link-card {
+    padding: 1rem 1.1rem;
   }
 
   .link-icon {
@@ -284,41 +452,19 @@
   }
 
   .link-title {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
-  .link-description {
-    font-size: 0.85rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .profile-name {
+  .link-arrow {
     font-size: 1.5rem;
   }
 
-  .profile-title {
-    font-size: 0.95rem;
+  .links-footer {
+    margin-top: 1.25rem;
+    padding-top: 0.85rem;
   }
 
-  .profile-bio {
-    font-size: 0.85rem;
-  }
-
-  .link-card {
-    padding: 0.875rem 1rem;
-  }
-
-  .link-icon {
-    width: 36px;
-    height: 36px;
-  }
-
-  .link-title {
-    font-size: 1rem;
-  }
-
-  .link-description {
-    font-size: 0.8rem;
+  .links-footer p {
+    font-size: 0.75rem;
   }
 }
