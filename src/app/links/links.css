@@ -343,7 +343,7 @@
   }
 
   .profile-section {
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
   }
 
   .profile-image {
@@ -353,17 +353,17 @@
   }
 
   .profile-name {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin: 0 0 0.3rem 0;
   }
 
   .profile-title {
-    font-size: 1.25rem;
+    font-size: 2rem;
     margin: 0 0 0.7rem 0;
   }
 
   .profile-bio {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     padding: 0 0.25rem;
   }
