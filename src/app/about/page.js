@@ -130,7 +130,6 @@ export default async function Page() {
             <h2 className="gradient-border">Certification</h2>
             <ul>
               <li>応用情報技術者</li>
-              <li>TOEIC 710点</li>
             </ul>
           </div>
 
