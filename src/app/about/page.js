@@ -60,7 +60,7 @@ export default async function Page() {
             <ul>
               <li>Student in Tsukuba University </li>
               <li>STECH</li>
-              <li>STARTIX</li>
+              <li>STARTiX</li>
             </ul>
           </div>
 
