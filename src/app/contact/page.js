@@ -1,10 +1,10 @@
-import React from 'react'
-import './contact.css'
+import React from "react";
+import "./contact.css";
 
 export default function Page() {
   return (
-    <div className='contact_page'>
-    {/* <div className="Form">
+    <div className="contact_page">
+      {/* <div className="Form">
       <div className='text-center text-6xl font-bold my-14'>
       <h1 className="Form-Title">Contact</h1>
       </div>
@@ -25,17 +25,12 @@ export default function Page() {
       <input type="submit" value="送信する" className="Form-Btn"/> 
     </div> */}
 
-    <div className="otherInfo">
-    <h1 className="otherTitle">Contact</h1>
+      <div className="contactLink">
+        <p>Xでの問い合わせをお願いします。</p>
+        <a href="https://twitter.com/amatuzi7306" className="contactImage">
+          <img src="/images/x.png" />
+        </a>
+      </div>
     </div>
-
-  <div className="contactLink">
-  <p>Xでの問い合わせをお願いします。</p>
-  <a href='https://twitter.com/amatuzi7306' className="contactImage"><img src="/images/x.png"/></a>
-  
-  </div>
-
-  </div>
-
-  )
+  );
 }

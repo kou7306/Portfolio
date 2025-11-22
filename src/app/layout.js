@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ThreeBackground from "./ThreeBackground";
-import Header from "./mobileHeader";
+import ConditionalLayout from "./ConditionalLayout";
 import { Analytics } from "@vercel/analytics/react";
 import Head from "next/head";
 
@@ -27,8 +26,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/images/logo2.png" />
       </Head>
       <body className={inter.className}>
-        <ThreeBackground />
-        <Header />
+        <ConditionalLayout />
 
         {children}
         <script src="/script.js" />
