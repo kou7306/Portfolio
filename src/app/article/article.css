@@ -1,23 +1,19 @@
-.article{
-    color: white;
-    
+.article {
+  color: white;
+  margin-top: 160px;
 }
 
-.articleTitle{
-    text-align: center;
+.articleTitle {
+  text-align: center;
 }
 
-
-.article h1{
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 120px 0px;
+.article h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 120px 0px;
 }
 
 .items {
-    background-color: black;
-    margin: 120px 30px;
+  background-color: black;
+  margin: 120px 30px;
 }
-
-
-

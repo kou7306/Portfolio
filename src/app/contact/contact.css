@@ -142,20 +142,18 @@ font-size: 20px;
 }
 } */
 
-.contactImage{
-    width: 50px;
-    height: 50px;
-    margin-top: 30px;
+.contactImage {
+  width: 50px;
+  height: 50px;
+  margin-top: 30px;
 }
 
-.contactImage:hover{
-    opacity: 0.7;
+.contactImage:hover {
+  opacity: 0.7;
 }
 
-
-
-.contact_page{
-    margin-top: 120px;
+.contact_page {
+  margin-top: 120px;
 }
 
 /* .github{
@@ -167,37 +165,33 @@ font-size: 20px;
     height: auto;
 } */
 
-
-.contactLink{
-    text-align: center;
-    margin:40px 0 100px;
-    display: flex;
-  flex-direction: column; /* 要素を縦方向に並べる */
-  align-items: center; /* 水平方向の中央揃え */
-  justify-content: center; /* 垂直方向の中央揃え */
-  text-align: center; /* テキストも中央揃え */
-  height: 100%; /* 必要に応じて高さを調整 */
-
+.contactLink {
+  text-align: center;
+  margin: 160px 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
 }
 
-.contactLink p{
-    font-size: 1.5rem;
-    color: #fff;
+.contactLink p {
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-.otherTitle{
-    font-size: 4rem;
-    font-weight: bold;
-    color: #fff;
+.otherTitle {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.Form-Title{
-    font-size: 4rem;
+.Form-Title {
+  font-size: 4rem;
 }
 
-.otherInfo{
-    text-align: center;
-    margin-top: 120px;
+.otherInfo {
+  text-align: center;
+  margin-top: 120px;
 }
-
-
