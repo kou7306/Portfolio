@@ -1,0 +1,609 @@
+/* GitHub Persona About ページのスタイル */
+
+.persona-about-page {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  padding: 40px 20px;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(240, 240, 250, 0.95),
+    rgba(230, 230, 245, 0.95)
+  );
+  border-radius: 30px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* ヘッダー */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.2),
+    rgba(118, 75, 162, 0.2)
+  );
+  padding: 30px;
+  border-radius: 20px;
+  margin: -50px -50px 50px -50px;
+}
+
+.back-button {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  z-index: 100;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.back-button:hover {
+  background: #e5e7eb;
+  transform: translateX(-5px);
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+}
+
+.about-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* セクション */
+.info-section {
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #667eea;
+}
+
+/* レベル計算 */
+.level-formula {
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  border-radius: 15px;
+}
+
+.formula-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 15px 0;
+  border: 2px solid #667eea;
+  color: #667eea;
+}
+
+.formula-note {
+  text-align: center;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* ランク判定表 */
+.rank-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rank-row {
+  display: grid;
+  grid-template-columns: 120px 100px 1fr;
+  gap: 30px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+  transition: background 0.2s ease;
+}
+
+.rank-row:hover:not(.rank-header) {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.rank-row:last-child {
+  border-bottom: none;
+}
+
+.rank-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.rank-level {
+  font-weight: 600;
+}
+
+.rank-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+}
+
+.rank-c-minus {
+  background: #9ca3af;
+}
+.rank-c {
+  background: #6b7280;
+}
+.rank-c-plus {
+  background: #78716c;
+}
+.rank-b-minus {
+  background: #84cc16;
+}
+.rank-b {
+  background: #22c55e;
+}
+.rank-b-plus {
+  background: #10b981;
+}
+.rank-a-minus {
+  background: #3b82f6;
+}
+.rank-a {
+  background: #6366f1;
+}
+.rank-a-plus {
+  background: #8b5cf6;
+}
+.rank-s {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+/* 職業ルート */
+.job-routes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.job-route {
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.job-route.magic {
+  background: linear-gradient(
+    135deg,
+    rgba(147, 51, 234, 0.1),
+    rgba(59, 130, 246, 0.1)
+  );
+  border: 2px solid rgba(147, 51, 234, 0.3);
+}
+
+.job-route.outlaw {
+  background: linear-gradient(
+    135deg,
+    rgba(239, 68, 68, 0.1),
+    rgba(220, 38, 38, 0.1)
+  );
+  border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.job-route.warrior {
+  background: linear-gradient(
+    135deg,
+    rgba(245, 158, 11, 0.1),
+    rgba(217, 119, 6, 0.1)
+  );
+  border: 2px solid rgba(245, 158, 11, 0.3);
+}
+
+.route-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background: white;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.job-item:hover {
+  transform: translateX(5px);
+}
+
+.language {
+  font-weight: 600;
+  color: #667eea;
+  min-width: 100px;
+}
+
+.arrow {
+  margin: 0 10px;
+  color: #999;
+}
+
+.job {
+  color: #333;
+  font-weight: 500;
+}
+
+/* ハイブリッド職業 */
+.hybrid-note {
+  color: #666;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.hybrid-table {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hybrid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  align-items: center;
+}
+
+.hybrid-row:hover:not(.hybrid-header) {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.hybrid-row:last-child {
+  border-bottom: none;
+}
+
+.hybrid-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.hybrid-combo {
+  font-weight: 600;
+}
+
+.hybrid-job {
+  font-weight: 700;
+  color: #667eea;
+  text-align: right;
+}
+
+.hybrid-header .hybrid-job {
+  color: white;
+}
+
+/* 特殊称号カード */
+.special-title-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.special-title-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.special-title-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.card-jobs {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  min-height: 40px;
+  line-height: 1.3;
+}
+
+.card-special {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-top: 10px;
+}
+
+/* 統計データカード */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: linear-gradient(
+    135deg,
+    rgba(102, 126, 234, 0.1),
+    rgba(118, 75, 162, 0.1)
+  );
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.stat-name {
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ルールリスト */
+.rule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.rule-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.rule-text {
+  color: #333;
+  font-size: 1rem;
+}
+
+/* 判定例 */
+.example-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.example-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #667eea;
+}
+
+.example-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.example-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.example-item {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.5;
+}
+
+.example-item strong {
+  color: #667eea;
+}
+
+/* フッター */
+.about-footer {
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.try-button {
+  display: inline-block;
+  padding: 18px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.try-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .persona-about-page {
+    padding: 15px 10px;
+  }
+
+  .about-container {
+    padding: 25px 20px;
+    border-radius: 20px;
+  }
+
+  .about-header {
+    margin: -25px -20px 25px -20px;
+    padding: 50px 20px 25px;
+  }
+
+  .back-button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    margin-bottom: 0;
+    font-size: 0.85rem;
+    padding: 8px 14px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .rank-row {
+    grid-template-columns: 90px 70px 1fr;
+    gap: 15px;
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .rank-badge {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+
+  .job-routes {
+    grid-template-columns: 1fr;
+  }
+
+  .route-title {
+    font-size: 1.2rem;
+  }
+
+  .language {
+    min-width: 80px;
+    font-size: 0.9rem;
+  }
+
+  .job {
+    font-size: 0.9rem;
+  }
+
+  .hybrid-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 12px 15px;
+  }
+
+  .hybrid-job {
+    text-align: left;
+    margin-top: 5px;
+  }
+
+  .special-title-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-icon {
+    font-size: 2.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .example-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .try-button {
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+
+  .info-section {
+    margin-bottom: 35px;
+  }
+}
