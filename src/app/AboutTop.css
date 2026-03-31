@@ -1,74 +1,42 @@
+/* Top About 本文 — Article リストの .sao-article-title と同じ font-size / line-height / color（inherit で Inter 継承） */
 
-.about-all::before {
-
-    /* content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; */
-    /* background: rgba(0, 0, 0, 0.3); 背景全体を半透明の黒にする */
-
+.sao-panel--about .sao-panel-header {
+  margin-bottom: 32px;
+  padding-bottom: 22px;
 }
 
-.about-contents {
-
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-right: 40%;
+.sao-panel--about .sao-panel-body p.sao-about-detail {
+  margin: 0 0 36px;
+  padding-top: 4px;
+  max-width: 52em;
+  display: block;
+  font-family: inherit;
+  font-size: clamp(15px, 1.35rem, 18px);
+  line-height: 1.6;
+  color: rgba(220, 240, 255, 0.9);
+  font-feature-settings: "palt" 1;
+  text-align: justify;
+  text-justify: inter-ideograph;
 }
 
-.about-title {
-    font-size: 6.5rem;
-    font-weight: bold;
-
-   
+.sao-panel--about .sao-panel-body p.sao-about-detail::first-line {
+  letter-spacing: 0.03em;
 }
 
-.about-detail {
-    font-size: 2rem;
-    font-weight: 400;
-}
-
-
-
-.about-button{
-    width: 60%;
-    height: 100%;
-    margin: 7% 30% 0 10%;
+.sao-about-button {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(92, 225, 255, 0.1);
 }
 
 @media screen and (max-width: 720px) {
-    .about-all {
-        /* background-image: url("/images/img2.png"); */
-        /* color: white;
-        padding: 13px;
-        height: 100vh;
-        width: 100vw;   
-        background-repeat: no-repeat;
-        position: relative; 
-        background-size: cover;
-        object-fit: cover;
-     */   
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* 水平方向に中央揃え */
-        text-align: center;
-        width: 100%;
-        padding: 13px;
-    
-    }
-    .about-contents {
-        text-align: center;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-right: 0%;
-    }
+  .sao-panel--about .sao-panel-header {
+    margin-bottom: 26px;
+    padding-bottom: 18px;
+  }
 
-    .about-button{
-        width: 60%;
-        height: 100%;
-        margin: 7% 20% 0 20%;
-        
-      
-    }
-    
+  .sao-panel--about .sao-panel-body p.sao-about-detail {
+    margin-bottom: 28px;
+    font-size: clamp(15px, 4vw, 17px);
+  }
 }

@@ -49,9 +49,11 @@
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 5px solid var(--primary-color, #800080);
+  border: 5px solid var(--primary-color, #5ce1ff);
   box-shadow: 0 8px 24px rgba(128, 0, 128, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .profile-image:hover {
@@ -158,7 +160,7 @@
 
 .link-card:hover {
   transform: translateY(-4px);
-  border-color: var(--primary-color, #800080);
+  border-color: var(--primary-color, #5ce1ff);
   box-shadow: 0 12px 32px rgba(128, 0, 128, 0.4);
   background: rgba(40, 40, 40, 0.9);
 }
@@ -212,7 +214,7 @@
 }
 
 .link-card:hover .link-title {
-  color: var(--primary-color, #800080);
+  color: var(--primary-color, #5ce1ff);
 }
 
 .link-description {
@@ -229,7 +231,7 @@
 }
 
 .link-card:hover .link-arrow {
-  color: var(--primary-color, #800080);
+  color: var(--primary-color, #5ce1ff);
   transform: translateX(5px);
 }
 
@@ -273,7 +275,7 @@
     width: 120px;
     height: 120px;
     margin-bottom: 1rem;
-    border: 5px solid var(--primary-color, #800080);
+    border: 5px solid var(--primary-color, #5ce1ff);
   }
 
   .profile-name {

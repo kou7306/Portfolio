@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #800080; /* プライマリカラーを定義 */
-  --secondary-color: #4b0082; /* セカンダリカラーを定義 */
-  --tertiary-color: #701c71; /* サードカラーを定義 */
-  --quaternary-color: #3d0569; /* クォータナリカラーを定義 */
+  --primary-color: #00e5ff;
+  --secondary-color: #00b4cc;
+  --tertiary-color: #0088a3;
+  --quaternary-color: #004d5c;
 }
 
 body {
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background-color: #0f0f0f;
+  background-color: #010106;
   margin: 0;
   display: relative;
 }
@@ -44,7 +44,9 @@ html {
   html {
     margin: 0;
     padding: 0;
+    /* ナビ・ヒーロー等の rem レイアウト用。本文は各所で px/clamp を使う */
     font-size: 8px;
+    -webkit-text-size-adjust: 100%;
   }
   .gradient-border {
     display: inline-block;

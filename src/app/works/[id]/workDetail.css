@@ -1,41 +1,67 @@
-.workALL{
-    color: #fff;
-    margin: 120px 20%;
+.workALL {
+  color: #fff;
+  margin: 160px auto;
+  max-width: 800px;
+  padding: 0 24px;
 }
 
-.workALL h1{
-    font-size: 3.5rem;
-    
+.workALL .workTitle {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.workALL .workTitle{
-    text-align: center;
+.workALL .workTitle h1 {
+  font-family: var(--font-orbitron), "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 2.2rem;
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #ffffff 0%, #b8f6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 12px rgba(92, 225, 255, 0.3));
 }
 
-.workALL img{
-    margin: 10% auto;
-    width: 100%;
+.workALL > img {
+  margin: 0 auto 40px;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid rgba(92, 225, 255, 0.2);
+  box-shadow: 0 0 30px rgba(92, 225, 255, 0.08);
+  display: block;
 }
 
-.workDetail{
-    margin-top: 50px;
-    width:100%;
-    font-size: 2rem;
+.workDetail {
+  margin-top: 20px;
+  width: 100%;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(220, 240, 255, 0.9);
+  background: rgba(8, 20, 38, 0.5);
+  border: 1px solid rgba(92, 225, 255, 0.12);
+  border-radius: 6px;
+  padding: 32px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .workDetail * {
-    overflow-wrap: break-word;
-  }
-  
-  .workDetail  a{
-    text-decoration: underline;
-  }
+  overflow-wrap: break-word;
+}
 
-  .workDetail  a:hover{
-    color: #60a5ff;
-  }
+.workDetail a {
+  color: var(--primary-color, #5ce1ff);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
-  .workDetail  img{
-    width:50%;
-    margin: 0 auto;
-  }
+.workDetail a:hover {
+  color: #88eeff;
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.4);
+}
+
+.workDetail img {
+  width: 60%;
+  margin: 20px auto;
+  display: block;
+  border-radius: 4px;
+}

@@ -50,9 +50,9 @@
 }
 
 .profile{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-top: 30px;
-  
+  line-height: 1.8;
 }
 
 .name-detail{
@@ -74,7 +74,7 @@
 }
 .affiliation ul{
   margin-left: 80px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   list-style: square;
 }
 
@@ -109,6 +109,8 @@
 
 .skill-con p{
   width: 100%;
+  font-size: 1.2rem;
+  margin-top: 6px;
 }
 
 .affiliation h2{
@@ -157,6 +159,61 @@
   color: #60a5ff;
 }
 
+/* SAO name styling */
+.sao-about-name {
+  font-family: var(--font-orbitron), "Hiragino Kaku Gothic Pro", sans-serif;
+  background: linear-gradient(180deg, #ffffff 0%, #b8f6ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 14px rgba(92, 225, 255, 0.35));
+  letter-spacing: 0.08em;
+}
+
+/* SAO list in panels */
+.sao-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sao-list li {
+  font-size: 1.6rem;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(92, 225, 255, 0.08);
+  color: rgba(220, 240, 255, 0.9);
+  position: relative;
+  padding-left: 24px;
+}
+
+.sao-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+  background: var(--primary-color, #5ce1ff);
+  box-shadow: 0 0 6px rgba(92, 225, 255, 0.4);
+}
+
+.sao-list li:last-child {
+  border-bottom: none;
+}
+
+/* SAO skill category header */
+.sao-skill-category {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(92, 225, 255, 0.8);
+  margin: 40px 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(92, 225, 255, 0.15);
+  text-shadow: 0 0 6px rgba(92, 225, 255, 0.3);
+}
 
 .certification h2{
     margin: 60px 0 60px 0;
@@ -169,7 +226,7 @@
 }
 .certification ul{
   margin-left: 80px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   list-style: square;
 }
 
@@ -211,9 +268,9 @@
 }
 
 .profile{
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-top: 30px;
-  
+  line-height: 1.8;
 }
 
 .name-detail{
@@ -237,7 +294,7 @@
 
 .affiliation ul{
   margin-left: 20px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   list-style: square;
 }
 
@@ -269,7 +326,7 @@
 
 .certification ul{
   margin-left: 20px;
-  font-size: 2.5rem;
+  font-size: 3rem;
   list-style: square;
 }
 

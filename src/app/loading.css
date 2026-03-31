@@ -2,12 +2,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* 画面の高さいっぱいに伸ばす */
+  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .load {
-  width: 100px; /* 幅を100pxに設定 */
-  height: 100px; /* 高さを100pxに設定 */
-  border-width: 8px; /* ボーダーの幅を大きく */
-  border-color: var(--primary-color); /* 背景色をプライマリカラーに設定 */
+  width: 60px;
+  height: 60px;
+  border-width: 3px;
+  border-color: rgba(92, 225, 255, 0.2);
+  border-top-color: var(--primary-color, #5ce1ff);
+  box-shadow: 0 0 20px rgba(92, 225, 255, 0.15);
 }

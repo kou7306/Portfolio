@@ -1,23 +1,36 @@
-.moreAboutAll{
-    margin: 180px 10% 50px;
-    color: #f0f0f0;
-    text-align: center;
-    font-size: 2rem;
-    
+.moreAboutAll {
+  margin: 180px auto 80px;
+  max-width: 800px;
+  padding: 0 24px;
+  color: rgba(220, 240, 255, 0.9);
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.moreAboutAll h1{
-    font-size: 4rem;
-    margin: 40px 0 20px;
-    font-weight: bold;
+.moreAboutAll h1 {
+  font-family: var(--font-orbitron), "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.08em;
+  margin: 48px 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(92, 225, 255, 0.2);
+  color: rgba(180, 240, 255, 0.95);
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.25);
 }
 
-.moreAboutAll h2{
-    font-size: 3rem;
-    border-bottom: #fff 1px solid;
-    margin: 30px 0;
+.moreAboutAll h2 {
+  font-size: 1.1rem;
+  color: rgba(92, 225, 255, 0.7);
+  margin: 28px 0 10px;
+  padding-left: 12px;
+  border-left: 2px solid rgba(92, 225, 255, 0.4);
 }
 
-.moreAboutAll p{
-    line-height: 1.5;
+.moreAboutAll p {
+  margin-bottom: 16px;
+  color: rgba(200, 230, 245, 0.8);
+}
+
+.moreAboutAll s {
+  color: rgba(160, 200, 220, 0.5);
 }
