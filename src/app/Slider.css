@@ -8,11 +8,16 @@
 .slideImage {
   aspect-ratio: 1/1;
   width: 100%;
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
   display: block;
 }
 
 .swiper-slide {
   width: auto;
+  max-width: 400px;
   overflow: hidden;
 }
 
@@ -68,7 +73,8 @@
 
 @media screen and (min-width: 768px) {
   .slideImage {
-    aspect-ratio: initial;
+    aspect-ratio: 16/10;
+    max-height: 300px;
   }
 }
 
