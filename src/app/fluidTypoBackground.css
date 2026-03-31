@@ -1,0 +1,35 @@
+/* SAO: code rain under HUD grid + vignette */
+.fluid-typo-stack {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.fluid-typo-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.fluid-typo-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 85% 65% at 50% 42%,
+    transparent 0%,
+    rgba(5, 12, 22, 0.75) 55%,
+    var(--sao-bg-deep, #050d18) 100%
+  );
+  pointer-events: none;
+}
+
+.fluid-typo-overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 120px rgba(5, 15, 30, 0.9);
+  pointer-events: none;
+}

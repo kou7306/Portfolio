@@ -1,0 +1,42 @@
+/* Top About 本文 — Article リストの .sao-article-title と同じ font-size / line-height / color（inherit で Inter 継承） */
+
+.sao-panel--about .sao-panel-header {
+  margin-bottom: 32px;
+  padding-bottom: 22px;
+}
+
+.sao-panel--about .sao-panel-body p.sao-about-detail {
+  margin: 0 0 36px;
+  padding-top: 4px;
+  max-width: 52em;
+  display: block;
+  font-family: inherit;
+  font-size: clamp(15px, 1.35rem, 18px);
+  line-height: 1.6;
+  color: rgba(220, 240, 255, 0.9);
+  font-feature-settings: "palt" 1;
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+.sao-panel--about .sao-panel-body p.sao-about-detail::first-line {
+  letter-spacing: 0.03em;
+}
+
+.sao-about-button {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(92, 225, 255, 0.1);
+}
+
+@media screen and (max-width: 720px) {
+  .sao-panel--about .sao-panel-header {
+    margin-bottom: 26px;
+    padding-bottom: 18px;
+  }
+
+  .sao-panel--about .sao-panel-body p.sao-about-detail {
+    margin-bottom: 28px;
+    font-size: clamp(15px, 4vw, 17px);
+  }
+}

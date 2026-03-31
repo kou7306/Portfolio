@@ -1,40 +1,135 @@
-
-.img-container{
-    margin: 0;
-    height: 80vh;
-    display: relative;
-    display: inline-block;
-    width: 100%;
- 
-
+.img-container {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-
-
-
-.top-text{
-    color: white;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-weight: bold;
+.top-text {
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 5;
 }
 
-.top-text h1{
-    font-size: 3.5rem;
+/* Ring */
+.sao-hex-ring {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(92, 225, 255, 0.3);
+  position: relative;
+  animation: sao-hex-pulse 4s ease-in-out infinite;
 }
 
-.top-text p{
-    font-size: 2rem;
+.sao-hex-ring::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(92, 225, 255, 0.2);
+  animation: sao-hex-counter-rotate 20s linear infinite;
 }
-/* 
-@media screen and (max-width: 720px) {
-    .top-text h1{
-        font-size: 3rem;
-    }
-    .top-text p{
-        font-size: 1.5rem;
-    }
-} */
+
+.sao-hex-ring::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  border-radius: 50%;
+  border: 1px dashed rgba(92, 225, 255, 0.15);
+  animation: sao-hex-rotate 15s linear infinite;
+}
+
+@keyframes sao-hex-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(92, 225, 255, 0.15), inset 0 0 20px rgba(92, 225, 255, 0.05);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(92, 225, 255, 0.3), inset 0 0 30px rgba(92, 225, 255, 0.1);
+    transform: scale(1.02);
+  }
+}
+
+@keyframes sao-hex-rotate {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sao-hex-counter-rotate {
+  to { transform: rotate(-360deg); }
+}
+
+/* Typing message */
+.sao-system-line {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.sao-type-text {
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: rgba(200, 240, 255, 0.8);
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.3);
+}
+
+/* Hero name */
+.sao-hero-name {
+  font-family: var(--font-orbitron), "Hiragino Kaku Gothic Pro", sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #b8f6ff 40%,
+    #5ce1ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 20px rgba(92, 225, 255, 0.4));
+}
+
+/* Subtitle */
+.sao-hero-subtitle-wrap {
+  transform-origin: center;
+  margin-top: 16px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(92, 225, 255, 0.2);
+  border-bottom: 1px solid rgba(92, 225, 255, 0.2);
+}
+
+.sao-hero-subtitle {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  color: rgba(200, 240, 255, 0.7);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .sao-hero-name {
+    font-size: 3rem;
+  }
+
+  .sao-hex-ring {
+    width: 130px;
+    height: 130px;
+    margin-bottom: 24px;
+  }
+
+  .sao-hero-subtitle {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+  }
+
+  .sao-type-text {
+    font-size: 14px;
+  }
+}

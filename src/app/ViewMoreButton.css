@@ -1,30 +1,3 @@
-.custom-button {
-  /* background: linear-gradient(to right, #8e44ad, #ef5fff); */
-  background: linear-gradient(
-    to right,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: white;
-  padding: 10px 20px;
-  font-size: 2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  height: 100%;
-  /* 他のスタイルを追加 */
-}
-
-.custom-button:hover {
-  /* background: linear-gradient(to right, #6f2987, #b735b2); ホバー時のグラデーション（暗め） */
-  background: linear-gradient(
-    to right,
-    var(--tertiary-color),
-    var(--quaternary-color)
-  );
-}
-
 .view-con {
   width: 100%;
   height: 100%;
@@ -33,4 +6,64 @@
 .view-con a {
   width: 100%;
   height: 100%;
+  text-decoration: none;
+}
+
+.custom-button.sao-btn {
+  background: linear-gradient(
+    180deg,
+    rgba(22, 48, 72, 0.9) 0%,
+    rgba(10, 26, 44, 0.95) 100%
+  );
+  color: #e8fbff;
+  padding: 20px 44px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid rgba(92, 225, 255, 0.45);
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  box-shadow:
+    0 0 20px rgba(92, 225, 255, 0.15),
+    inset 0 1px 0 rgba(200, 250, 255, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-button.sao-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(92, 225, 255, 0.08),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.custom-button.sao-btn:hover::before {
+  left: 100%;
+}
+
+.custom-button.sao-btn:hover {
+  border-color: rgba(140, 245, 255, 0.85);
+  color: #ffffff;
+}
+
+.sao-btn-bracket {
+  color: rgba(92, 225, 255, 0.6);
+  font-size: 18px;
 }

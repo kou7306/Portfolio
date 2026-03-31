@@ -1,92 +1,92 @@
-.article-all {
-  display: flex;
-  color: white;
-  align-items: flex-start;
-  gap: 20px;
-  /* 仮の高さ、実際のページに合わせて調整してください */
+.sao-article-inner {
+  color: #fff;
 }
 
-.article-title {
-  width: 40vw;
+.sao-article-sub {
+  font-size: clamp(13px, 1.05rem, 15px);
+  color: rgba(160, 220, 240, 0.6);
+  margin-bottom: 20px;
+  letter-spacing: 0.05em;
+}
+
+.sao-article-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sao-article-item {
+  border-bottom: 1px solid rgba(92, 225, 255, 0.1);
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.sao-article-item:last-child {
+  border-bottom: none;
+}
+
+.sao-article-item:hover {
+  background: rgba(92, 225, 255, 0.04);
+  border-color: rgba(92, 225, 255, 0.25);
+}
+
+.sao-article-link {
   display: flex;
   flex-direction: column;
-  align-items: center; /* 水平方向に中央揃え */
-  text-align: center;
-  height: 300px;
-
-  text-align: center;
-  position: sticky;
-  left: 0;
-  top: 90px;
+  gap: 6px;
+  padding: 18px 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.article-title h1 {
-  font-size: 6.5rem;
-  font-weight: bold;
+.sao-article-date {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: rgba(92, 225, 255, 0.5);
 }
 
-.article-content {
-  margin-top: 50px;
+.sao-article-title {
+  font-size: clamp(15px, 1.35rem, 18px);
+  color: rgba(220, 240, 255, 0.9);
+  line-height: 1.6;
 }
 
-.article-contents {
-  width: 60vw;
-  margin-left: 5%;
-  font-size: 1.5rem;
-  margin-top: 50px;
-  height: 1000px;
+.sao-article-item:hover .sao-article-title {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.2);
 }
 
-.article-contents h2 {
-  border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
-  border-image: linear-gradient(to right, var(--primary-color), #ffffff);
-  border-image-slice: 1; /* グラデーションの適用範囲を設定 */
+.sao-article-button {
+  margin-top: 32px;
+  max-width: 340px;
 }
 
-.article-button {
-  margin-top: 20px;
-  width: 60%;
+.sao-article-fallback {
+  font-size: clamp(14px, 0.95rem, 16px);
+  line-height: 1.6;
+  color: rgba(200, 220, 235, 0.75);
+  margin: 0 0 8px;
+}
+
+.sao-article-devhint {
+  display: block;
+  margin-top: 8px;
+  font-size: clamp(11px, 0.8rem, 13px);
+  color: rgba(92, 225, 255, 0.45);
+  font-family: ui-monospace, monospace;
+  word-break: break-word;
 }
 
 @media screen and (max-width: 720px) {
-  .article-all {
-    display: block;
-    /* 仮の高さ、実際のページに合わせて調整してください */
+  .sao-article-link {
+    padding: 12px 4px;
   }
 
-  .article-title {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 水平方向に中央揃え */
-    text-align: center;
-    width: 100%;
-    position: static;
+  .sao-article-title {
+    font-size: clamp(15px, 4vw, 17px);
   }
 
-  .article-title h1 {
-    font-size: 6.5rem;
-    font-weight: bold;
-  }
-
-  .article-contents {
-    width: 90%;
-    font-size: 1.5rem;
-    margin-top: 0px;
-    height: auto;
-    margin-bottom: 200px;
-  }
-  .article-content {
-    margin-top: 30px;
-  }
-
-  .article-contents h2 {
-    border-bottom: 4px solid; /* ボーダーの太さやスタイルを適切に設定 */
-    border-image-slice: 1; /* グラデーションの適用範囲を設定 */
-  }
-
-  .article-button {
-    width: 60%;
-    margin-left: 0px;
-    margin-top: 20px;
+  .sao-article-sub {
+    font-size: 13px;
   }
 }

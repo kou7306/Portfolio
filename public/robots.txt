@@ -3,7 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://kota-portfolio.vercel.app
+Host: https://kota-portfolio.com
 
 # Sitemaps
+Sitemap: https://kota-portfolio.com/sitemap.xml
 Sitemap: https://kota-portfolio.vercel.app/sitemap.xml

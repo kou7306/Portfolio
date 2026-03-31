@@ -1,0 +1,261 @@
+/* Tilt wrapper */
+.sao-panel-tilt {
+  will-change: transform;
+}
+
+/* SAO-style floating window / status panel */
+.sao-panel {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(8, 22, 42, 0.75) 0%,
+    rgba(5, 14, 28, 0.85) 100%
+  );
+  border: 1px solid rgba(92, 225, 255, 0.25);
+  border-radius: 6px;
+  padding: 40px 44px;
+  margin-bottom: 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    0 0 30px rgba(92, 225, 255, 0.08),
+    inset 0 1px 0 rgba(200, 250, 255, 0.06),
+    inset 0 0 40px rgba(5, 15, 30, 0.4);
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* Mouse-following glow spotlight */
+.sao-panel-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle 180px at var(--glow-x, -200px) var(--glow-y, -200px),
+    rgba(92, 225, 255, 0.07),
+    transparent
+  );
+  pointer-events: none;
+  z-index: 0;
+  transition: background 0.05s linear;
+}
+
+.sao-panel:hover {
+  border-color: rgba(92, 225, 255, 0.45);
+  box-shadow:
+    0 0 40px rgba(92, 225, 255, 0.15),
+    inset 0 1px 0 rgba(200, 250, 255, 0.08),
+    inset 0 0 40px rgba(5, 15, 30, 0.3);
+}
+
+/* Corner decorations */
+.sao-panel-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: rgba(92, 225, 255, 0.6);
+  border-style: solid;
+  pointer-events: none;
+  filter: drop-shadow(0 0 4px rgba(92, 225, 255, 0.4));
+}
+
+.sao-panel-corner-tl {
+  top: -1px;
+  left: -1px;
+  border-width: 2px 0 0 2px;
+}
+
+.sao-panel-corner-tr {
+  top: -1px;
+  right: -1px;
+  border-width: 2px 2px 0 0;
+}
+
+.sao-panel-corner-bl {
+  bottom: -1px;
+  left: -1px;
+  border-width: 0 0 2px 2px;
+}
+
+.sao-panel-corner-br {
+  bottom: -1px;
+  right: -1px;
+  border-width: 0 2px 2px 0;
+}
+
+/* Animated scan line */
+.sao-panel-scanline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(92, 225, 255, 0.4) 50%,
+    transparent 100%
+  );
+  animation: sao-scanline-move 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes sao-scanline-move {
+  0%,
+  100% {
+    top: 0;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  50% {
+    top: 100%;
+  }
+}
+
+/* Panel header */
+.sao-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(92, 225, 255, 0.15);
+}
+
+.sao-panel-diamond {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color, #5ce1ff);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(92, 225, 255, 0.6);
+}
+
+.sao-panel-title {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(180, 240, 255, 0.95);
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.4);
+  white-space: nowrap;
+}
+
+.sao-panel-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(92, 225, 255, 0.35),
+    transparent
+  );
+}
+
+.sao-panel-body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stat bar (HP/MP style) */
+.sao-stat-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.sao-stat-label {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: rgba(160, 220, 240, 0.8);
+  min-width: 60px;
+  text-transform: uppercase;
+}
+
+.sao-stat-track {
+  flex: 1;
+  height: 6px;
+  background: rgba(20, 40, 60, 0.8);
+  border-radius: 3px;
+  border: 1px solid rgba(92, 225, 255, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+.sao-stat-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color, #5ce1ff),
+    rgba(140, 240, 255, 0.9)
+  );
+  box-shadow: 0 0 10px rgba(92, 225, 255, 0.5);
+  transition: width 1s ease;
+  position: relative;
+}
+
+.sao-stat-fill::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 12px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+}
+
+.sao-stat-value {
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  font-size: 10px;
+  color: rgba(200, 250, 255, 0.9);
+  min-width: 40px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* SAO amber variant */
+.sao-panel.amber {
+  border-color: rgba(255, 190, 100, 0.25);
+  box-shadow:
+    0 0 30px rgba(255, 180, 80, 0.08),
+    inset 0 1px 0 rgba(255, 220, 160, 0.06);
+}
+
+.sao-panel.amber .sao-panel-corner {
+  border-color: rgba(255, 190, 100, 0.6);
+  filter: drop-shadow(0 0 4px rgba(255, 180, 80, 0.4));
+}
+
+.sao-panel.amber .sao-panel-diamond {
+  background: #ffbe64;
+  box-shadow: 0 0 10px rgba(255, 180, 80, 0.6);
+}
+
+.sao-panel.amber .sao-panel-title {
+  color: rgba(255, 230, 180, 0.95);
+  text-shadow: 0 0 8px rgba(255, 180, 80, 0.4);
+}
+
+.sao-panel.amber .sao-panel-scanline {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 190, 100, 0.4) 50%,
+    transparent 100%
+  );
+}
+
+@media screen and (max-width: 768px) {
+  .sao-panel {
+    padding: 28px 22px;
+    margin-bottom: 28px;
+  }
+}

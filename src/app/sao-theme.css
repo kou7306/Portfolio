@@ -1,0 +1,317 @@
+/* SAO-adjacent HUD chrome — decorative only, pointer-events: none */
+
+.sao-hud-root {
+  position: fixed;
+  inset: 0;
+  z-index: 998;
+  pointer-events: none;
+  font-family: var(--font-orbitron), ui-monospace, system-ui, sans-serif;
+  letter-spacing: 0.12em;
+  font-size: 10px;
+  color: rgba(180, 240, 255, 0.75);
+  text-transform: uppercase;
+}
+
+.sao-corners {
+  position: absolute;
+  inset: 0;
+}
+
+.sao-br {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 10px rgba(92, 225, 255, 0.55));
+  animation: sao-corner-glow 4s ease-in-out infinite;
+}
+
+.sao-br-tl {
+  top: 14px;
+  left: 14px;
+  border-width: 2px 0 0 2px;
+}
+
+.sao-br-tr {
+  top: 14px;
+  right: 14px;
+  border-width: 2px 2px 0 0;
+  animation-delay: 1s;
+}
+
+.sao-br-bl {
+  bottom: 14px;
+  left: 14px;
+  border-width: 0 0 2px 2px;
+  animation-delay: 2s;
+}
+
+.sao-br-br {
+  bottom: 14px;
+  right: 14px;
+  border-width: 0 2px 2px 0;
+  animation-delay: 3s;
+}
+
+@keyframes sao-corner-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 6px rgba(92, 225, 255, 0.35));
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(92, 225, 255, 0.75));
+  }
+}
+
+.sao-hud-top {
+  position: absolute;
+  top: 86px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 6px 14px;
+  background: rgba(4, 12, 24, 0.65);
+  border: 1px solid rgba(92, 225, 255, 0.28);
+  border-radius: 2px;
+  box-shadow:
+    0 0 20px rgba(92, 225, 255, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .sao-hud-top {
+    top: 72px;
+    font-size: 8px;
+    padding: 4px 10px;
+    max-width: 92vw;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.sao-hud-label {
+  color: rgba(92, 225, 255, 0.95);
+  text-shadow: 0 0 8px rgba(92, 225, 255, 0.4);
+}
+
+.sao-hud-sep {
+  color: rgba(92, 225, 255, 0.35);
+}
+
+.sao-hud-stat {
+  color: rgba(200, 255, 230, 0.85);
+}
+
+.sao-hud-tr {
+  position: absolute;
+  top: 112px;
+  right: 24px;
+  font-variant-numeric: tabular-nums;
+  color: rgba(160, 230, 255, 0.9);
+  text-shadow: 0 0 10px rgba(92, 225, 255, 0.35);
+  font-size: 11px;
+}
+
+@media screen and (max-width: 768px) {
+  .sao-hud-tr {
+    top: 72px;
+    right: 12px;
+    font-size: 9px;
+  }
+}
+
+.sao-hud-bl {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 9px;
+  color: rgba(140, 200, 220, 0.55);
+  border-left: 2px solid rgba(92, 225, 255, 0.35);
+  padding-left: 10px;
+  line-height: 1.5;
+}
+
+.sao-hud-bl small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  color: rgba(100, 180, 200, 0.45);
+  margin-top: 4px;
+}
+
+@media screen and (max-width: 768px) {
+  .sao-hud-bl {
+    left: 12px;
+    bottom: 12px;
+    font-size: 7px;
+    max-width: 70vw;
+  }
+}
+
+.sao-ping {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #5ce1ff;
+  box-shadow: 0 0 10px rgba(92, 225, 255, 0.9);
+  animation: sao-ping 2s ease-in-out infinite;
+  vertical-align: middle;
+}
+
+@keyframes sao-ping {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+}
+
+.sao-side-rail {
+  position: absolute;
+  left: 8px;
+  top: 28%;
+  bottom: 28%;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(92, 225, 255, 0.22) 15%,
+    rgba(92, 225, 255, 0.22) 85%,
+    transparent
+  );
+}
+
+.sao-side-rail::before,
+.sao-side-rail::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  width: 7px;
+  height: 1px;
+  background: rgba(92, 225, 255, 0.5);
+}
+
+.sao-side-rail::before {
+  top: 12%;
+}
+
+.sao-side-rail::after {
+  bottom: 12%;
+}
+
+@media screen and (max-width: 768px) {
+  .sao-side-rail {
+    display: none;
+  }
+}
+
+.sao-ring-glyph {
+  position: absolute;
+  right: -48px;
+  bottom: -48px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 210deg,
+    transparent 0deg,
+    rgba(92, 225, 255, 0.12) 45deg,
+    transparent 90deg,
+    rgba(92, 225, 255, 0.06) 140deg,
+    transparent 200deg,
+    rgba(120, 230, 255, 0.1) 260deg,
+    transparent 320deg
+  );
+  animation: sao-ring-rotate 28s linear infinite;
+  opacity: 0.85;
+}
+
+@keyframes sao-ring-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sao-ring-glyph {
+    width: 140px;
+    height: 140px;
+    right: -36px;
+    bottom: -36px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sao-br,
+  .sao-ping,
+  .sao-ring-glyph {
+    animation: none !important;
+  }
+
+  .sao-br {
+    opacity: 0.75;
+  }
+}
+
+/* Scanlines + CRT tint — sits above bg, below chrome text in stacking if needed */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 8, 20, 0.09) 2px,
+    rgba(0, 8, 20, 0.09) 3px
+  );
+  opacity: 0.55;
+  mix-blend-mode: multiply;
+}
+
+body:has(.links-page)::after {
+  display: none;
+}
+
+/* Content panels: optional bracket hint */
+.sao-panel-lite {
+  position: relative;
+}
+
+.sao-panel-lite::before,
+.sao-panel-lite::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(92, 225, 255, 0.22);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.sao-panel-lite::before {
+  top: -4px;
+  left: -4px;
+  border-width: 1px 0 0 1px;
+}
+
+.sao-panel-lite::after {
+  bottom: -4px;
+  right: -4px;
+  border-width: 0 1px 1px 0;
+}

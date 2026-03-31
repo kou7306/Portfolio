@@ -1,0 +1,121 @@
+.sao-cursor-root {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.sao-cursor-root.visible {
+  opacity: 1;
+}
+
+/* Center dot */
+.sao-cursor-dot {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5ce1ff;
+  box-shadow: 0 0 10px rgba(92, 225, 255, 0.9), 0 0 20px rgba(92, 225, 255, 0.3);
+  will-change: transform;
+}
+
+/* Ring container */
+.sao-cursor-ring {
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 44px;
+  height: 44px;
+  will-change: transform;
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+}
+
+.sao-cursor-ring.hovering {
+  top: -30px;
+  left: -30px;
+  width: 60px;
+  height: 60px;
+}
+
+/* SVG */
+.sao-cursor-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* Outer arc — partial circle, slow clockwise */
+.sao-cursor-arc-outer {
+  fill: none;
+  stroke: rgba(92, 225, 255, 0.45);
+  stroke-width: 1.2;
+  stroke-dasharray: 32 20 12 74;
+  stroke-linecap: round;
+  transform-origin: center;
+  animation: sao-cursor-spin 4s linear infinite;
+  transition: stroke 0.3s ease, stroke-dasharray 0.3s ease;
+}
+
+/* Inner arc — shorter, reverse */
+.sao-cursor-arc-inner {
+  fill: none;
+  stroke: rgba(92, 225, 255, 0.2);
+  stroke-width: 0.8;
+  stroke-dasharray: 18 88;
+  stroke-linecap: round;
+  transform-origin: center;
+  animation: sao-cursor-spin-reverse 3s linear infinite;
+  transition: stroke 0.3s ease;
+}
+
+/* Dot markers */
+.sao-cursor-marker {
+  fill: rgba(92, 225, 255, 0.35);
+  transform-origin: 25px 25px;
+  animation: sao-cursor-spin 4s linear infinite;
+  transition: fill 0.3s ease, r 0.3s ease;
+}
+
+/* Hover state */
+.sao-cursor-ring.hovering .sao-cursor-arc-outer {
+  stroke: rgba(92, 225, 255, 0.85);
+  stroke-dasharray: 50 12 24 52;
+  stroke-width: 1.5;
+}
+
+.sao-cursor-ring.hovering .sao-cursor-arc-inner {
+  stroke: rgba(92, 225, 255, 0.5);
+  stroke-dasharray: 40 66;
+}
+
+.sao-cursor-ring.hovering .sao-cursor-marker {
+  fill: rgba(92, 225, 255, 0.8);
+}
+
+@keyframes sao-cursor-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes sao-cursor-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+/* Hide on touch */
+@media (pointer: coarse) {
+  .sao-cursor-root {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sao-cursor-arc-outer,
+  .sao-cursor-arc-inner,
+  .sao-cursor-marker {
+    animation: none;
+  }
+}
