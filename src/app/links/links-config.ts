@@ -37,5 +37,5 @@ export const profileInfo: ProfileInfo = {
   name: "矢作恒太",
   englishName: "Kota Yahagi",
   image: "/images/logo2.png",
-  bio: "筑波大学大学院情報理工学位プログラムの修士一年です。\n普段はソフトウェア開発とロボットやAIを触ってます。",
+  bio: "筑波大学大学院情報理工学位プログラムの修士二年です。\n普段はソフトウェア開発とロボットやAIを触ってます。",
 };

@@ -16,4 +16,7 @@
 .qrInfo img{
     margin: 0 auto;
     width: 70%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: contain;
 }
