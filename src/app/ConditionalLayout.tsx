@@ -5,7 +5,6 @@ import FluidTypoBackground from "./FluidTypoBackground";
 import SaoHudChrome from "./SaoHudChrome";
 import SaoParticles from "./SaoParticles";
 import SaoCursor from "./SaoCursor";
-import SaoClickDistortion from "./SaoClickDistortion";
 import SaoMouseTrail from "./SaoMouseTrail";
 import Header from "./mobileHeader";
 
@@ -25,7 +24,6 @@ export default function ConditionalLayout() {
       {!minimal && <FluidTypoBackground />}
       {!minimal && <SaoParticles />}
       {!minimal && <SaoMouseTrail />}
-      {!minimal && <SaoClickDistortion />}
       <SaoCursor />
       <SaoHudChrome />
       <Header />
