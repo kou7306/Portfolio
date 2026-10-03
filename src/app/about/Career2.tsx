@@ -9,7 +9,9 @@ interface Career2Props {
 
 const Career2 = ({ datas }: Career2Props) => {
   const parseCareerDate = (date: string) => {
-    const normalized = date
+    const rangeStart = date.split(/[~〜～]/)[0] ?? date;
+
+    const normalized = rangeStart
       .replace(/\s+/g, "")
       .replace(/[年月]/g, "/")
       .replace(/日/g, "")
