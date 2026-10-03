@@ -31,7 +31,7 @@ export default async function Page() {
             <h1 className="sao-about-name">Kota Yahagi</h1>
             <p className="name-contents">矢作恒太</p>
             <p className="profile">
-              修士２年で、知能ロボット研究室で世界モデルを用いたロボットの強化学習の研究をしています。チームでなにかやることが大好きです。事業開発やAIに興味があります。27卒です。
+              修士2年で、知能ロボット研究室で世界モデルを用いたロボットの強化学習の研究をしています。チームでなにかやることが大好きです。事業開発やAIに興味があります。27卒です。
             </p>
             <div className="snsLink">
               <a href="https://twitter.com/amatuzi7306" className="snsImg">
@@ -61,7 +61,7 @@ export default async function Page() {
             </ul>
           </SaoPanel>
 
-          <SaoPanel title="Skill" delay={0.2}>
+          <SaoPanel title="Skill" delay={0.2} disableTilt>
             <h3 className="sao-skill-category">Language</h3>
             <ul className="skill-imgs">
               {datas

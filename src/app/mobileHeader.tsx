@@ -70,11 +70,6 @@ function Header() {
                   <span className="link">Contact</span>
                 </Link>
               </li>
-               <li className="navlist github-persona-btn-mobile">
-                 <Link href="/github-persona" onClick={closeMenu}>
-                   <span className="link">GitHub診断</span>
-                 </Link>
-               </li>
                <li className="navlist ai-chat-btn-mobile">
                  <Link href="/ai-chat" onClick={closeMenu}>
                    <span className="link">AI-Kotaに聞く</span>
@@ -132,12 +127,6 @@ function Header() {
            <li>
              <Link href="/contact">
                <span className="link">Contact</span>
-             </Link>
-           </li>
-
-           <li className="github-persona-btn">
-             <Link href="/github-persona">
-               <span className="link">GitHub診断</span>
              </Link>
            </li>
 
