@@ -8,9 +8,10 @@ import SaoCursor from "./SaoCursor";
 import SaoMouseTrail from "./SaoMouseTrail";
 import Header from "./mobileHeader";
 
-// AIチャットは一時的に無効化中のため "/ai-chat" を除外
+// AIチャット・GitHub診断は一時的に無効化中のため
+// "/ai-chat" と "/github-persona" を除外
 // 復旧時は ["/github-persona", "/ai-chat"] に戻す
-const MINIMAL_PATHS = ["/github-persona"];
+const MINIMAL_PATHS: string[] = [];
 
 export default function ConditionalLayout() {
   const pathname = usePathname();

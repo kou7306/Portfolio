@@ -1,3 +1,20 @@
+// =============================================================
+// GitHub診断（GitHub Persona）APIは一時的に無効化しています（2026-10-27）
+// 復旧手順:
+//   1. 下記の「無効化スタブ」を削除する
+//   2. その下の /* ... */ で囲んだ元の実装のコメントを外す
+// 注意: 同じディレクトリに route.js（未追跡）が存在します。
+//       Next.js は .ts を .js より優先するため、このファイルが
+//       残っている限り route.js は呼ばれません。
+// =============================================================
+
+// --- 無効化スタブ ---
+export async function GET() {
+  return new Response(null, { status: 404 });
+}
+
+// --- 以下、元の実装（無効化中） ---
+/*
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
@@ -59,3 +76,4 @@ export async function GET(request: NextRequest) {
     );
   }
 }
+*/

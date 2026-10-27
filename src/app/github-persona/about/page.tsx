@@ -1,3 +1,24 @@
+// =============================================================
+// GitHub診断（GitHub Persona）は一時的に無効化しています（2026-10-27）
+// 復旧手順:
+//   1. 下記の「無効化スタブ」を削除する
+//   2. その下の /* ... */ で囲んだ元の実装のコメントを外す
+// 注意: 同じディレクトリに page.js（未追跡）が存在します。
+//       Next.js は .tsx を .js より優先するため、page.tsx を
+//       .disabled にリネームすると page.js が表示されてしまいます。
+//       そのため /github-persona/page.tsx とは違い、このファイルは
+//       残したまま notFound() を返すスタブに差し替えています。
+// =============================================================
+
+import { notFound } from "next/navigation";
+
+// --- 無効化スタブ ---
+export default function GitHubPersonaAbout() {
+  notFound();
+}
+
+// --- 以下、元の実装（無効化中） ---
+/*
 "use client";
 
 import Link from "next/link";
@@ -221,3 +242,4 @@ export default function GitHubPersonaAbout() {
     </div>
   );
 }
+*/
