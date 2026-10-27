@@ -70,11 +70,13 @@ function Header() {
                  <span className="link">Contact</span>
                </Link>
               </li>
+              {/* GitHub診断は一時的に無効化中（復旧時はこのコメントを外す）
               <li className="navlist github-persona-btn-mobile">
                <Link href="/github-persona" onClick={closeMenu}>
                  <span className="link">GitHub診断</span>
                </Link>
               </li>
+              */}
               {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
               <li className="navlist ai-chat-btn-mobile">
                <Link href="/ai-chat" onClick={closeMenu}>
@@ -137,11 +139,13 @@ function Header() {
            </Link>
           </li>
 
+          {/* GitHub診断は一時的に無効化中（復旧時はこのコメントを外す）
           <li className="github-persona-btn">
            <Link href="/github-persona">
              <span className="link">GitHub診断</span>
            </Link>
           </li>
+          */}
 
           {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
           <li className="ai-chat-btn">
