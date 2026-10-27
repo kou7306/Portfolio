@@ -75,11 +75,13 @@ function Header() {
                    <span className="link">GitHub診断</span>
                  </Link>
                </li>
+               {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
                <li className="navlist ai-chat-btn-mobile">
                  <Link href="/ai-chat" onClick={closeMenu}>
                    <span className="link">AI-Kotaに聞く</span>
                  </Link>
                </li>
+               */}
             </ul>
           </div>
         </nav>
@@ -141,11 +143,13 @@ function Header() {
              </Link>
            </li>
 
+           {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
            <li className="ai-chat-btn">
              <Link href="/ai-chat">
                <span className="link">AI-Kotaに聞く</span>
              </Link>
            </li>
+           */}
         </ul>
       </nav>
     </div>
