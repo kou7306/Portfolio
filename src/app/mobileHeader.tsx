@@ -65,23 +65,23 @@ function Header() {
                   <span className="link">Article</span>
                 </Link>
               </li>
-               <li className="navlist">
-                <Link href="/contact" onClick={closeMenu}>
-                  <span className="link">Contact</span>
-                </Link>
+              <li className="navlist">
+               <Link href="/contact" onClick={closeMenu}>
+                 <span className="link">Contact</span>
+               </Link>
               </li>
-               <li className="navlist github-persona-btn-mobile">
-                 <Link href="/github-persona" onClick={closeMenu}>
-                   <span className="link">GitHub診断</span>
-                 </Link>
-               </li>
-               {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
-               <li className="navlist ai-chat-btn-mobile">
-                 <Link href="/ai-chat" onClick={closeMenu}>
-                   <span className="link">AI-Kotaに聞く</span>
-                 </Link>
-               </li>
-               */}
+              <li className="navlist github-persona-btn-mobile">
+               <Link href="/github-persona" onClick={closeMenu}>
+                 <span className="link">GitHub診断</span>
+               </Link>
+              </li>
+              {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
+              <li className="navlist ai-chat-btn-mobile">
+               <Link href="/ai-chat" onClick={closeMenu}>
+                 <span className="link">AI-Kotaに聞く</span>
+               </Link>
+              </li>
+              */}
             </ul>
           </div>
         </nav>
@@ -116,40 +116,40 @@ function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/about">
-              <span className="link">About</span>
-            </Link>
+           <Link href="/about">
+             <span className="link">About</span>
+           </Link>
           </li>
           <li>
-            <Link href="/works">
-              <span className="link">Works</span>
-            </Link>
+           <Link href="/works">
+             <span className="link">Works</span>
+           </Link>
           </li>
           <li>
-            <Link href="/article">
-              <span className="link">Article</span>
-            </Link>
+           <Link href="/article">
+             <span className="link">Article</span>
+           </Link>
           </li>
 
-           <li>
-             <Link href="/contact">
-               <span className="link">Contact</span>
-             </Link>
-           </li>
+          <li>
+           <Link href="/contact">
+             <span className="link">Contact</span>
+           </Link>
+          </li>
 
-           <li className="github-persona-btn">
-             <Link href="/github-persona">
-               <span className="link">GitHub診断</span>
-             </Link>
-           </li>
+          <li className="github-persona-btn">
+           <Link href="/github-persona">
+             <span className="link">GitHub診断</span>
+           </Link>
+          </li>
 
-           {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
-           <li className="ai-chat-btn">
-             <Link href="/ai-chat">
-               <span className="link">AI-Kotaに聞く</span>
-             </Link>
-           </li>
-           */}
+          {/* AIチャットは一時的に無効化中（復旧時はこのコメントを外す）
+          <li className="ai-chat-btn">
+           <Link href="/ai-chat">
+             <span className="link">AI-Kotaに聞く</span>
+           </Link>
+          </li>
+          */}
         </ul>
       </nav>
     </div>
